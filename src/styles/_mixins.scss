@@ -1,1 +1,52 @@
+@use './variables' as *;
 
+@mixin flexCenter($direction, $content, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $align;
+}
+
+@mixin buttonStyle($width, $height, $b-r, $text-transf, $f-s, $color, $bg-color) {
+  cursor: pointer;
+  width: $width;
+  height: $height;
+  border-radius: $b-r;
+  border: none;
+  text-transform: $text-transf;
+  font-size: $f-s;
+  font-weight: $bold-weight;
+  color: $color;
+  background-color: $bg-color;
+}
+
+@mixin inputStyle($width, $height, $color, $f-s, $letter-sp, $ph-color, $focus-color, $focus-th) {
+  width: $width;
+  height: $height;
+  border: none;
+  padding: 15px 20px;
+  color: $color;
+  font-size: $f-s;
+  font-weight: $bold-weight;
+  letter-spacing: $letter-sp;
+  &::placeholder {
+    color: $ph-color;
+    font-size: $f-s;
+    letter-spacing: $letter-sp;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin pageStyles {
+  width: 100%;
+  height: auto;
+  display: grid;
+}
+
+@mixin removeScrollBar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
