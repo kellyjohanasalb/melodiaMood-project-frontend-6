@@ -1,10 +1,22 @@
+import { HiOutlineBell } from "react-icons/hi";
+import { HiOutlineCog } from "react-icons/hi";
+import { logo } from '../../../assets/logo-mood 2.png'
 
-function Header() {
+const Header = () => {
   return (
-    <header>
-      <h1>Mi encabezado</h1>
-    </header>
-  );
+    <Header className= 'header'>
+      <img src={logo} alt="logo" />
+      <section className="interations">
+        <link >
+          <img src={HiOutlineBell} alt="notificaiones" />
+        </link>
+        <link >
+          <img src={HiOutlineCog} alt="settings" />
+        </link>
+      </section>
+    </Header>
+  )
 }
 
-export default Header;
+export default Header
+
