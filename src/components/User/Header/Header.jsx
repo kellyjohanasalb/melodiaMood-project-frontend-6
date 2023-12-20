@@ -1,20 +1,22 @@
+import { Link } from "react-router-dom";
 import { HiOutlineBell } from "react-icons/hi";
 import { HiOutlineCog } from "react-icons/hi";
-import { logo } from '../../../assets/logo-mood 2.png'
+import imageLogo from '../../../assets/logo-mood-2.png'
+import './styles.scss'
 
-const Header = () => {
-  return (
-    <Header className= 'header'>
-      <img src={logo} alt="logo" />
+function Header() {
+  return (  
+    <header className= 'header'>
+      <img src={imageLogo} alt="logo" /> 
       <section className="interations">
-        <link >
-          <img src={HiOutlineBell} alt="notificaiones" />
-        </link>
-        <link >
-          <img src={HiOutlineCog} alt="settings" />
-        </link>
+        <Link >
+         <HiOutlineBell />
+        </Link>
+        <Link >
+          <HiOutlineCog />
+        </Link>
       </section>
-    </Header>
+    </header>
   )
 }
 
