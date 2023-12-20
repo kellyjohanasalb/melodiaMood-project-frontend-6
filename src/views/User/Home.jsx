@@ -1,12 +1,12 @@
-import Header from '../../components/User/Header/Header'
+import Header from '../../components/User/Header/Header.jsx' 
 
-const Home = () => {
+function Home() {
   return (
-    <main>
-      <Header />
-    </main>
-  )
+  <main>
+    <Header />  
+     <h1>holaaa</h1>
+  </main>
+  );
 }
 
-export default Home
-
+export default Home;
