@@ -10,11 +10,9 @@ function Header() {
       <img src={imageLogo} alt="logo" /> 
       <section className="interations">
         <Link >
-         {/*  <img src={HiOutlineBell} alt="notificaiones" /> */}
          <HiOutlineBell />
         </Link>
         <Link >
-          {/* <img src={HiOutlineCog} alt="settings" /> */}
           <HiOutlineCog />
         </Link>
       </section>
