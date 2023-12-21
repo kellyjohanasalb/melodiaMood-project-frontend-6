@@ -1,0 +1,100 @@
+    $color-1: #020126;
+    $color-2: #F2EA7E;
+    $color-3: #D93829;
+    $color-4: #400101;
+    $color-5: #0D0D0D;
+    $color-6: #314fa4;
+    $color-7: #ffff;
+
+    .settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px; /* Ajusta el espacio respecto al margen superior */
+    }
+
+    .settings-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px; /* Ajusta el espacio entre la imagen y el título */
+
+    .back-icon {
+        font-size: 20px;
+        color: $color-3;
+        cursor: pointer;
+        margin-right: 20px;
+        margin-top: -50px;
+    }
+
+    .logo {
+        width: 100px;
+        height: auto;
+        margin-left: auto; /* Centra horizontalmente la imagen */
+        margin-right: auto; /* Centra horizontalmente la imagen */
+    }
+
+    h1 {
+        font-size: 24px;
+        color: $color-1;
+        margin-left: 20px;
+        margin-top: -50px;
+    }
+    }
+
+    .settings-content {
+    width: 100%;
+    max-width: 600px;
+    background-color: $color-7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    }
+
+    .settings-section {
+    margin-bottom: 20px;
+
+    h2 {
+        font-size: 20px;
+        color: $color-3;
+        margin-bottom: 10px;
+    }
+
+    .setting-item {
+        background-color: $color-2;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        p {
+        margin: 0;
+        }
+    }
+    }
+
+    .logout-button {
+    padding: 15px;
+    background-color: $color-4;
+    color: $color-7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px; 
+    text-align: center;
+    transition: background-color 0.3s ease;
+
+    svg {
+        margin-right: 10px;
+    }
+
+    &:hover {
+        background-color: darken($color-4, 10%);
+    }
+    }
