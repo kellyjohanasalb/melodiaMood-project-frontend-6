@@ -1,5 +1,5 @@
 import { FaArrowLeft, FaEnvelope, FaUser, FaPhone, FaSmile } from 'react-icons/fa';
-import logoMood from '../../../assets/logo-mood.png';
+import logoMood from '../../../assets/img/logo-mood.png';
 import './styles.scss';
 
 const SignUp = () => {

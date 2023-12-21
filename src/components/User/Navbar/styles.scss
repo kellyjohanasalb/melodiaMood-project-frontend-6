@@ -1,0 +1,61 @@
+@use '../../../styles/variables' as *;
+@use  '../../../styles/mixins' as * ;
+
+.navbar-container-Principal {
+    width: 400px;
+    height: 65px;
+    display: flex;
+    justify-content: space-between; /* Distribuye los íconos equitativamente */
+    align-items: center; /* Centra verticalmente los íconos */
+  }
+  
+  .navabr-container-principal-1,
+  .navabr-container-principal-2,
+  .navabr-container-principal-3 {
+    flex: 1; /* Cada ícono ocupa una parte igual del espacio disponible */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los íconos */
+    align-items: center;
+    flex-direction: column;
+  }
+  .home {
+    width: 30px;
+    height: 28px;
+    font-size: 24px;
+    display: grid;
+    @include flexCenter(row, space-between, center);
+   /*  position: absolute;
+    top: 0px;
+    left: 50%; */
+    color: $color-7;
+  }
+
+  .search, .library{
+    width: 30px;
+    height: 28px;
+    font-size: 24px;
+   /*  position: absolute;
+    top: 0px;
+    left: 50% */;
+    color: $color-8;
+  }
+  
+  .ho {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    color: $color-7; /* Color del texto */
+    font-size: 12px; /* Tamaño del texto */
+  }
+
+  .search-1, .your{
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    color: $color-8; /* Color del texto */
+    font-size: 12px;
+  } 

@@ -1,5 +1,5 @@
 import './styles/App.scss';
-import logoMood from './assets/logo-mood.png';
+import logoMood from './assets/img/logo-mood.png';
 
 const App = () => {
   return (
