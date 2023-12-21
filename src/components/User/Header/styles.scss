@@ -10,9 +10,16 @@
     border-top-left-radius: 33px;
     padding: 0 20px 0 10px;
     .interactions{
-        width: 82px;
-        height: 100%;
-        @include flexCenter(row, space-between, center);
+        width: 31px;
+        height: 26px;
+        color: withe;
+        @include flexCenter(row, space-between, center); 
+        .notification, .setting{
+            
+            font-size: 28px;
+            color: pink;
+
+        }
     }
 }
     
