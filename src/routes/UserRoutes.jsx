@@ -5,8 +5,9 @@ import Library from '../views/User/Library.jsx';
 import Search from '../views/User/Search.jsx';
 import Profile from '../views/User/Profile.jsx';
 import Settings from '../views/User/Settings.jsx';
-import SignUp from '../views/User/SignUp.jsx';
+import SignUp from '../views/User/SignUp/SignUp.jsx';
 import App from '../App.jsx';
+import LoginPage from '../views/User/Login/Login.jsx';
 
 function UserRoutes() {
     return (
@@ -14,6 +15,7 @@ function UserRoutes() {
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/home" element={<Home />} />
+                <Route path="/login" element={<LoginPage />} />
                 <Route path="/now-playing" element={<NowPlaying />} />
                 <Route path="/library" element={<Library />} />
                 <Route path="/search" element={<Search />} />
