@@ -35,7 +35,7 @@ function Home() {
           <Card />
         </div>
         <div  className="container-home-body-3">
-          <span>Los mas escuchado segun tu estado de animo</span>
+          <span>Los neesitasd segun tu estado de animo</span>
           <Card />
         </div>
       </section>
