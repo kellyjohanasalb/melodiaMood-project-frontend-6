@@ -1,0 +1,28 @@
+@use '../../../styles/variables' as *;
+@use  '../../../styles/mixins' as * ;
+
+
+
+.Card-container {
+  width: 96%;
+  height: 100%; 
+  display: flex; 
+  overflow-y: hidden; 
+ /*  @include removeScrollBar ; */
+  padding-bottom: 20px; 
+  margin-left: 10px;
+}
+
+.gallery-container-1 {
+  display: flex; 
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto; 
+}
+
+.gallery-container-1 img {
+  width: 150px; 
+  height: 189px; 
+  border-radius: 10px; 
+}
+
