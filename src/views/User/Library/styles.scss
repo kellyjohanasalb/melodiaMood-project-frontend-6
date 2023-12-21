@@ -1,0 +1,80 @@
+    $color-1: #020126;
+    $color-2: #F2EA7E;
+    $color-3: #D93829;
+    $color-4: #400101;
+    $color-5: #0D0D0D;
+    $color-6: #314fa4;
+    $color-7: #ffff;
+
+    .library-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    }
+
+    .library-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+
+    .back-icon {
+        font-size: 20px;
+        color: $color-3;
+        cursor: pointer;
+        margin-right: 20px;
+        margin-top: -50px;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: $color-1;
+        margin-left: 20px;
+        margin-top: -50px;
+    }
+    }
+
+    .library-section {
+    width: 100%;
+    max-width: 600px; 
+    margin-bottom: 30px;
+    }
+
+    h2 {
+    font-size: 20px;
+    color: $color-3;
+    margin-bottom: 15px;
+    }
+
+    .song-item,
+    .album-item,
+    .playlist-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: $color-7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    img {
+        width: 50px; /* Ajusta el tamaño de la imagen según tus necesidades */
+        height: auto;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    p {
+        margin: 0;
+        flex: 1;
+    }
+
+    .icon {
+        font-size: 18px;
+        color: $color-3;
+        cursor: pointer;
+    }
+    }
