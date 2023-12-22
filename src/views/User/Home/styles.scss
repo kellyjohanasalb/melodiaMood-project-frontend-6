@@ -5,8 +5,8 @@
 .container-home {
     width: 414px;
     height: 896px;
+    background-color: linear-gradient(to bottom, #33ccff 4%, #314fa4 60%);
     font-family: Arial, sans-serif;
-    /* Otros estilos generales para el contenedor principal */
   }
   
   .contianer-header-home {
@@ -59,6 +59,7 @@
     font-size: 1.3em; /* Tamaño del texto para las secciones */
     font-weight: bold;
     margin-left: 10px;
+    margin-top: 10px;
     color: $color-7;
     font-family: $font-source;
     font-size: 15px;
