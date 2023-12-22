@@ -1,12 +1,17 @@
 @use '../../../styles/variables' as *;
 @use  '../../../styles/mixins' as * ;
 
+
 .navbar-container-Principal {
     width: 400px;
     height: 65px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%);
   }
   
   .navabr-container-principal-1,
