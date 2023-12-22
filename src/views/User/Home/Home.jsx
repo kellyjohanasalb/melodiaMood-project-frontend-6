@@ -10,7 +10,7 @@ import "./styles.scss";
 
 function Home() {
   return (
-    <main className="container-home">
+    <main className="container-home bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700">
       <header className="contianer-header-home">
         <img src={ImageLogo} alt="logo" />
         <section className="interations">
