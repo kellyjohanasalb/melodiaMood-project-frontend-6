@@ -5,16 +5,16 @@
     width: 400px;
     height: 65px;
     display: flex;
-    justify-content: space-between; /* Distribuye los íconos equitativamente */
-    align-items: center; /* Centra verticalmente los íconos */
+    justify-content: space-between;
+    align-items: center;
   }
   
   .navabr-container-principal-1,
   .navabr-container-principal-2,
   .navabr-container-principal-3 {
-    flex: 1; /* Cada ícono ocupa una parte igual del espacio disponible */
+    flex: 1; 
     display: flex;
-    justify-content: center; /* Centra horizontalmente los íconos */
+    justify-content: center; 
     align-items: center;
     flex-direction: column;
   }
