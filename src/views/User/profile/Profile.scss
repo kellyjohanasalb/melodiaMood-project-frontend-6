@@ -1,0 +1,93 @@
+
+.main{
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.profile-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-info, 
+.playlist-element{
+    display: flex;
+    flex-direction: row;
+}
+
+.playlist {
+    padding-top: 40px;
+}
+
+.image{
+  position: relative;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  
+}
+
+.image .profile-pic{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.playlist-pic {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+.data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.data h2{
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+}
+span{
+  font-size: 16px;
+}
+.playlist-name{
+    text-align: start;
+    font-size: 18px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.row .info{
+  text-align: center;
+  padding: 0 20px;
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.buttons .btn{
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 8px 25px;
+  border-radius: 25px;
+  font-size: 18px;
+  white-space: nowrap;
+  background: linear-gradient(to left, #33ccff 0%, #ff99cc 100%);
+}
+.buttons .btn:hover{
+  box-shadow: inset 0 5px 20px rgba(0,0,0,0.4);
+}
