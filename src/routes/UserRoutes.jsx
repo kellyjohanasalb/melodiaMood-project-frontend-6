@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from '../views/User/Home/Home.jsx';
-import NowPlaying from '../views/User/NowPlaying.jsx';
+import NowPlaying from '../views/User/NowPlaying/NowPlaying.jsx';
 import Library from '../views/User/Library/Library.jsx';
 import Search from '../views/User/Search/Search.jsx';
-import Profile from '../views/User/Profile.jsx';
+import Profile from '../views/User/profile/Profile.jsx';
 import Settings from '../views/User/Settings/Settings.jsx';
 import SignUp from '../views/User/SignUp/SignUp.jsx';
 import LoginPage from '../views/User/Login/Login.jsx';
