@@ -1,20 +1,25 @@
 @use '../../../styles/variables' as *;
 @use  '../../../styles/mixins' as * ;
 
+
 .navbar-container-Principal {
     width: 400px;
     height: 65px;
     display: flex;
-    justify-content: space-between; /* Distribuye los íconos equitativamente */
-    align-items: center; /* Centra verticalmente los íconos */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%);
   }
   
   .navabr-container-principal-1,
   .navabr-container-principal-2,
   .navabr-container-principal-3 {
-    flex: 1; /* Cada ícono ocupa una parte igual del espacio disponible */
+    flex: 1; 
     display: flex;
-    justify-content: center; /* Centra horizontalmente los íconos */
+    justify-content: center; 
     align-items: center;
     flex-direction: column;
   }
