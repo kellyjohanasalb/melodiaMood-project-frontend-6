@@ -1,24 +1,27 @@
-import { Link } from "react-router-dom";
-import { HiOutlineBell } from "react-icons/hi";
-import { HiOutlineCog } from "react-icons/hi";
-import imageLogo from '../../../assets/logo-mood-2.png'
-import './styles.scss'
+import { Link } from 'react-router-dom'
+import Bell from '../../../assets/iconos/bell 1.png'
+import History from '../../../assets/iconos/history.png'
+import Setting from '../../../assets/iconos/setting 1.png'
+import imageLogo from "../../../assets/img/logo-mood-2.png";
+import "./styles.scss";
 
 function Header() {
-  return (  
-    <header className= 'header'>
-      <img src={imageLogo} alt="logo" /> 
+  return (
+    <header className="header">
+      <img src={imageLogo} alt="logo" />
       <section className="interations">
-        <Link >
-         <HiOutlineBell />
+        <Link className="bell">
+          <img src={Bell} alt="notificacion" />
         </Link>
-        <Link >
-          <HiOutlineCog />
+        <Link className="history">
+          <img src={History} alt="historia" />
+        </Link>
+        <Link className="settings">
+          <img src={Setting} alt="configuracion" />
         </Link>
       </section>
     </header>
-  )
+  );
 }
 
-export default Header
-
+export default Header;

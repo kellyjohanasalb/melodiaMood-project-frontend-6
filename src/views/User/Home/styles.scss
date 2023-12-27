@@ -1,0 +1,68 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+
+.container-home {
+    width: 414px;
+    height: 896px;
+    background-color: linear-gradient(to bottom, #33ccff 4%, #314fa4 60%);
+    font-family: Arial, sans-serif;
+  }
+  
+  .contianer-header-home {
+    width: 380px;
+    height: 73px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px;
+    background-color: $color-6;
+    color: #fff;
+    margin-left: 20px;
+  }
+  
+  .contianer-header-home img {
+    max-width: 150px; /* Ajustar el tamaño del logo según sea necesario */
+    height: 35px;
+  }
+  
+  .interations {
+    display: flex;
+    align-items: center;
+  }
+  
+  .interations > div {
+    width: 26px;
+    height: 10px;
+     color: $color-7;
+  }
+  
+  .interations > div .bell, .history, .settings{
+    width: 22px; /* Tamaño de los iconos */
+    height: 22px;
+  }
+  
+  .container-home-body {
+    width: 414px;
+    height: 718px;
+    display: grid;
+  }
+  
+  .container-home-body > div {
+    width: 414px;
+    height: 227px;
+    margin-bottom: -27px; /* Espacio entre las secciones del cuerpo */
+  }
+  
+  .container-home-body span {
+    font-size: 1.3em; /* Tamaño del texto para las secciones */
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: $color-7;
+    font-family: $font-source;
+    font-size: 15px;
+  }
+  
+ 
