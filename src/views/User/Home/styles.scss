@@ -3,9 +3,11 @@
 
 
 .container-home {
-    width: 414px;
-    height: 896px;
-    background-color: linear-gradient(to bottom, #33ccff 4%, #314fa4 60%);
+    width: $mobile-width;
+    height: $mobile-height;
+    background: $color-11;
+    border: 2px solid ;
+    border-radius: 20px;
     font-family: Arial, sans-serif;
   }
   
@@ -17,30 +19,55 @@
     align-items: center;
     justify-content: space-between;
     padding: 11px;
-    background-color: $color-6;
+    background-color: $color-11;
     color: #fff;
     margin-left: 20px;
   }
-  
-  .contianer-header-home img {
-    max-width: 150px; /* Ajustar el tamaño del logo según sea necesario */
-    height: 35px;
+
+  .imgen-profile{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+  }
+
+  .all{
+    width: 70px;
+    height: 20px;
+   /*  display: grid; */
+    border-radius: 5px;
+    border: none;
+    background-color: $color-13;
+    margin-top: 10px;
   }
   
   .interations {
     display: flex;
     align-items: center;
+    
+  }
+
+  .Music{
+      width: 70px;
+      height: 20px;
+     /*  display: grid; */
+      border-radius: 5px;
+      border: none;
+      background-color: $color-13;
+      margin-top: 10px;
   }
   
   .interations > div {
     width: 26px;
     height: 10px;
-     color: $color-7;
+    color: $color-7;
+    align-items: center;
   }
+
   
   .interations > div .bell, .history, .settings{
     width: 22px; /* Tamaño de los iconos */
     height: 22px;
+    gap: 5px;
   }
   
   .container-home-body {
@@ -55,11 +82,13 @@
     margin-bottom: -27px; /* Espacio entre las secciones del cuerpo */
   }
   
-  .container-home-body span {
+  .container-home-body,.container-home-body-1, .container-home-body-2, .container-home-body-3,span {
+    width: 20px;
+    height: 20px;
     font-size: 1.3em; /* Tamaño del texto para las secciones */
     font-weight: bold;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 5px;
+    margin-top: 28px;
     color: $color-7;
     font-family: $font-source;
     font-size: 15px;

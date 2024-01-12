@@ -1,16 +1,17 @@
-    $color-1: #020126;
-    $color-2: #F2EA7E;
-    $color-3: #D93829;
-    $color-4: #400101;
-    $color-5: #0D0D0D;
-    $color-6: #314fa4;
-    $color-7: #ffff;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
 
     .signup-container {
+    width: $mobile-width;
+    height: $mobile-height;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 20px 20px; /* Ajusta el espacio respecto al margen superior */
+    padding: 50px 20px 20px;
+    background: $color-11;
+    border: 2px solid  ;
+    border-radius: 20px; /* Ajusta el espacio respecto al margen superior */
     }
 
     .signup-header {
@@ -21,7 +22,7 @@
 
     .back-icon {
         font-size: 20px;
-        color: $color-3;
+        color: $color-9;
         cursor: pointer;
         margin-top: -200px; /* Ajusta la posición vertical de la flecha */
     }
@@ -50,13 +51,13 @@
         .input-icon {
         margin-right: 10px;
         font-size: 18px;
-        color: $color-3;
+        color: $color-9;
         }
 
         input {
         width: 100%;
         padding: 10px;
-        border: 1px solid $color-3;
+        border: 1px solid $color-9;
         border-radius: 5px;
         }
     }
@@ -64,10 +65,26 @@
     .signup-button {
         width: 100%;
         padding: 15px;
-        background-color: $color-6;
+        background-color: $color-9;
         color: $color-7;
         border: none;
         border-radius: 5px;
         cursor: pointer;
     }
     }
+
+    @media screen and (min-width: 768px) {
+        .signup-container {
+          width: $desktop-width;
+          height: $desktop-height;
+        }
+      
+        .signup-header .back-icon {
+          margin-top: 0;
+        }
+      
+        .signup-form .signup-button {
+          width: auto;
+        }
+      }
+  

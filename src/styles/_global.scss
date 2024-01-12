@@ -18,9 +18,6 @@ body {
   width: 100%;
   height: 100%;
   font-family: $font-source;
-  background-color: $primary-text-color ;
-  display: grid;
-  place-content: center;
 }
 
 li {
@@ -29,15 +26,4 @@ li {
 
 a {
   text-decoration: none;
-}
-
-#root {
-  width: $mobile-width;
-  height: $mobile-height;
-  background-color: $color-6; 
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 33px;
-  position: relative;
-
 }

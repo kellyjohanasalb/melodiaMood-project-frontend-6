@@ -1,11 +1,30 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
 .app-container {
+    width: $mobile-width;
+    height: $mobile-height;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    background: linear-gradient(to right, #F7D7F8, #AD2FAF);
+    border: 2px solid  ;
+    border-radius: 20px;
+    }
+    
+    .icon-image {
+        width: 300px; 
+        height: 300px;
     }
 
-    .icon-image {
-    width: 300px; 
-    height: 300px;
-    }
+    @media screen and (min-width: 768px) {
+        .app-container {
+          width: $desktop-width;
+          height: $desktop-height;
+        }
+        .icon-image{
+            width: 600px;
+            height: 600px;
+        }
+      }
+    
