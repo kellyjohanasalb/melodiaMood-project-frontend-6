@@ -41,7 +41,7 @@ function Home() {
           <Card />
         </div>
       </section>
-      {/* <Navbar /> */}
+      <Navbar />
     </main>
 
   );

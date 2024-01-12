@@ -4,9 +4,19 @@
 .container-search-major{
     width: 400px;
     height: 752px;
-    background-color: $color-6;
-    border-radius: 35px;
+    background: $color-11;
+    border: 2px solid ;
+    border-radius: 20px;
     display: grid;
+    @media screen and (min-width: $desktop-width) {
+        .settings-container {
+          width: $desktop-width;
+          height: $desktop-height;
+          background-color: $color-6;
+          border-radius: 35px;
+          display: grid;
+        }
+      }
     .container-search-major-header{
         width: 388px;
         height: 1px;
@@ -41,8 +51,8 @@
         width: 374px;
         height: 213px;
         display: grid;
-        margin-left: 24px;
-        margin-top: 52px;
+        margin-left: 14px;
+        margin-top: -19px;
         color: $color-7;
         h3{
             height: 36px;
@@ -52,13 +62,13 @@
         }
         .emotions{
             width: 384px;
-            height: 11px;
+            height: 2px;
             display: grid;
             margin-top: -12px;
             @include flexCenter(row, space-between, center);
             .emotions-happy{
                 width: 172px;
-                height: 104px;
+                height: 92px;
                 background-color: $color-9;
                 border-radius: 6px;
                 margin-top: -51px;
@@ -81,7 +91,7 @@
             }
             .emotions-anxiety{
                 width: 172px;
-                height: 104px;
+                height: 92px;
                 background-color: $color-10;
                 border-radius: 6px;
                 margin-top: -51px;
@@ -107,8 +117,8 @@
         width: 365px;
         height: 12px;
         display: grid;
-        margin-left: 24px;
-        margin-top: -168px;
+        margin-left: 14px;
+        margin-top: -247px;
         color: $color-7;
         h3{
             height: 36px;
@@ -123,11 +133,11 @@
             width: 384px;
             height: 130px;
             display: grid;
-            margin-top: -65px;
+            margin-top: -80px;
             @include flexCenter(row, space-between, center);
             .browse-podcast{
                 width: 172px;
-                height: 104px;
+                height: 92px;
                 background-color: $color-3;
                 border-radius: 6px;
                 margin-top: -51px;
@@ -150,7 +160,7 @@
             }
             .new-realse{
                 width: 172px;
-                height: 104px;
+                height: 92px;
                 background-color: $color-1;
                 border-radius: 6px;
                 margin-top: -51px;
@@ -176,11 +186,11 @@
             width: 384px;
             height: 130px;
             display: grid;
-            margin-top: -12px;
+            margin-top: -19px;
             @include flexCenter(row, space-between, center);
             .new-emotions{
                 width: 172px;
-                height: 104px;
+                height: 92px;
                 background-color: $color-4;
                 border-radius: 6px;
                 margin-top: -51px;
@@ -203,7 +213,7 @@
             }
             .for-you{
                 width: 172px;
-                height: 104px;
+                height: 92px;
                 background-color: $color-2;
                 border-radius: 6px;
                 margin-top: -51px;
@@ -214,14 +224,16 @@
                 margin-top: 118px;
                 .you{
                     width: 35px;
-                    height: 20px;
+                    height: 34px;
                     font-family: $font-source;
                     font-size: 18px;
                     font-weight: 700;
                     color: $color-7;
                     margin-right: 84px;
                     margin-bottom: 79px;
-                    margin-left: 10px;  
+                    margin-left: 10px;
+                    display: flex;  
+                    align-items: center;
                 }
             }
         }
@@ -229,11 +241,11 @@
             width: 384px;
             height: 130px;
             display: grid;
-            margin-top: -12px;
+            margin-top: -19px;
             @include flexCenter(row, space-between, center);
             .calm-minor{
                 width: 172px;
-                height: 104px;
+                height: 92px;
                 background-color: $color-9;
                 border-radius: 6px;
                 margin-top: -51px;
@@ -256,7 +268,7 @@
             }
             .home{
                 width: 172px;
-                height: 104px;
+                height: 92px;
                 background-color: $color-10;
                 border-radius: 6px;
                 margin-top: -51px;
