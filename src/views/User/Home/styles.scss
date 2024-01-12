@@ -8,7 +8,7 @@
     background: $color-11;
     border: 2px solid ;
     border-radius: 20px;
-    font-family: Arial, sans-serif;
+    font-family: $font-source;
   }
   
   .contianer-header-home {
@@ -22,6 +22,7 @@
     background-color: $color-11;
     color: #fff;
     margin-left: 20px;
+    margin-top: 20px;
   }
 
   .imgen-profile{
@@ -94,4 +95,9 @@
     font-size: 15px;
   }
   
- 
+  @media screen and (min-width: 768px) {
+    .settings-container {
+      width: $desktop-width;
+      height: $desktop-height;
+    }
+  }

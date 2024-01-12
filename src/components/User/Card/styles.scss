@@ -16,13 +16,14 @@
   display: flex; 
   gap: 20px;
   flex-wrap: nowrap;
-  overflow-x: hidden; 
-  @include removeScrollBar;
+  overflow-x: hidden;
+  /* overflow-x: hidden; 
+  @include removeScrollBar; */
 }
 
 .gallery-container-1 img {
   width: 150px; 
-  height: 189px; 
+  height: 175px; 
   border-radius: 10px; 
 }
 
