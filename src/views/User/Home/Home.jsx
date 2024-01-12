@@ -4,15 +4,17 @@ import Navbar from '../../../components/User/Navbar/Navbar';
 import Card from '../../../components/User/Card'
 import { FaRegBell } from "react-icons/fa";
 import { FaHistory } from "react-icons/fa";
+import { RxAvatar } from "react-icons/rx";
 import { IoSettingsOutline } from "react-icons/io5";
-import ImageLogo from "../../../assets/img/logo-mood-2.png";
 import "./styles.scss";
 
 function Home() {
   return (
     <main className="container-home bg-gradient-to-r from-blue-300 via-blue-500 to-blue-700">
       <header className="contianer-header-home">
-        <img src={ImageLogo} alt="logo" />
+      <RxAvatar className="imgen-profile" />
+      <button className='all'>Todas</button>
+      <button className='Music'>Música</button>
         <section className="interations">
           <div >
             <FaRegBell className="bell" />
@@ -35,11 +37,11 @@ function Home() {
           <Card />
         </div>
         <div  className="container-home-body-3">
-          <span>Los neesitasd segun tu estado de animo</span>
+          <span>Los necesitas segun tu estado de animo</span>
           <Card />
         </div>
       </section>
-      <Navbar />
+      {/* <Navbar /> */}
     </main>
 
   );
