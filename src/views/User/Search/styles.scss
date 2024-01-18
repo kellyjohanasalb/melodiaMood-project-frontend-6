@@ -9,7 +9,7 @@
     border-radius: 20px;
     display: grid;
     @media screen and (min-width: $desktop-width) {
-        .settings-container {
+        .container-search-major {
           width: $desktop-width;
           height: $desktop-height;
           background-color: $color-6;
@@ -21,6 +21,15 @@
         width: 388px;
         height: 1px;
         display: grid;
+        @media screen and (min-width: $desktop-width) {
+            .container-search-major-header {
+              width: $desktop-width;
+              height: $desktop-height;
+              background-color: $color-6;
+              border-radius: 35px;
+              display: grid;
+            }
+          }
         h1{
           width: 128px;  
           font-family: $font-source;
@@ -39,6 +48,8 @@
             border-radius: 8px;
             margin-left: 24px;
             border: none;
+            display: grid;
+            
         }
         .magnifying-glass{
             width: 56px;
