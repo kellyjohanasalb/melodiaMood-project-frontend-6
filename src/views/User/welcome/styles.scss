@@ -1,7 +1,7 @@
-@use '../styles/variables' as *;
-@use '../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
-.app-container {
+.welcome-container {
     width: $mobile-width;
     height: $mobile-height;
     display: flex;
@@ -18,7 +18,7 @@
     }
 
     @media screen and (min-width: 768px) {
-        .app-container {
+        .weolcome-container {
           width: $desktop-width;
           height: $desktop-height;
         }

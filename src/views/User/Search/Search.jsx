@@ -1,8 +1,25 @@
+import { useDispatch, useSelector } from "react-redux";
+import { setSongs } from "../../../store/search/searchSlice";
+import { getData  } from '../../../store/search/searchAction'
 import { CiSearch } from "react-icons/ci";
 import "./styles.scss";
 import Navbar from "../../../components/User/Navbar/Navbar";
 
 function Search() {
+  const dispatch = useDispatch();
+  const searchSongs = useSelector((state) => state.search.searchsongs);
+ /*  const isLoading = useSelector((state) => state.search.isLoading);
+  const isError = useSelector((state) => state.search.isError); */
+ 
+  const handleSearch = () => {
+    dispatch(getData(searchSongs));
+  };
+  
+ /*  const handleInputChange = (e) => {
+    dispatch(setSearchTerm(e.target.value));
+  }; */
+
+  
   return (
     <main className="container-search-major">
       <header className="container-search-major-header">
@@ -10,9 +27,11 @@ function Search() {
         <input
           className="Search"
           type="text"
-          placeholder="             Artists, songs, or buttonodcast"
+          value={searchSongs}
+          onChange={(e) => dispatch(setSongs(e.target.value))}
+          placeholder="               Artists, songs, or podcast"
         />
-        <CiSearch className="magnifying-glass" />
+        <CiSearch className="magnifying-glass" onClick={handleSearch} />
       </header>
       <section className="container-search-moods">
         <h3>Your main moods</h3>

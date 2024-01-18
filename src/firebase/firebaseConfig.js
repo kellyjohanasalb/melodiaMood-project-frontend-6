@@ -8,13 +8,12 @@ import { getFirestore } from 'firebase/firestore'
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAr71WlP-lG19lzZJE1Oy1Tp7-L4KsalyI",
-  authDomain: "melodia-1-mood.firebaseapp.com",
-  databaseURL: "https://melodia-1-mood-default-rtdb.firebaseio.com",
-  projectId: "melodia-1-mood",
-  storageBucket: "melodia-1-mood.appspot.com",
-  messagingSenderId: "293802579955",
-  appId: "1:293802579955:web:a68a32b47c4950ca8be486"
+  apiKey: "AIzaSyD04I5x8fSsy_zME6yKKxj9thO8y4DRjrQ",
+  authDomain: "mood-ef190.firebaseapp.com",
+  projectId: "mood-ef190",
+  storageBucket: "mood-ef190.appspot.com",
+  messagingSenderId: "236546637217",
+  appId: "1:236546637217:web:f323bd25b574df5c36dfe0"
 };
 
 // Initialize Firebase

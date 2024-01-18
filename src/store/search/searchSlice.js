@@ -10,7 +10,10 @@ const searchSlice = createSlice({
     },
    reducers:{
     setSongs: (state, action) => {
-        state.songs = action.payload;
+        state.songs = action.payload.songs;
+    },
+    setLoading: (state, action) => {
+        state.isLoading = action.payload;
     },
     setError: (state, action) => {
         state.isError = action.payload;
@@ -18,4 +21,6 @@ const searchSlice = createSlice({
    },
 })
 
-export const { setSongs, setAlbums, setPodcast, setError } = searchSlice.actions
+export const { setSongs, setLoading, setError } = searchSlice.actions
+
+export default searchSlice.reducer

@@ -1,42 +1,43 @@
-    import { FaPhone, FaGoogle } from 'react-icons/fa';
-    import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
-    import { auth } from '../../../firebase/firebaseConfig';
-    import { useNavigate } from 'react-router-dom';
-    import logoMood from '../../../assets/img/logo-mood.png';
-    import './styles.scss';
 
-    const LoginPage = () => {
-    const navigate = useNavigate();
+import { FaPhone, FaGoogle } from 'react-icons/fa';
+import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+import { auth } from '../../../firebase/firebaseConfig';
+import { useNavigate } from 'react-router-dom';
+import logoMood from '../../../assets/img/logo-mood.png';
+import './styles.scss';
 
-    const handleGoogleLogin = async () => {
-        try {
-        const provider = new GoogleAuthProvider();
-        await signInWithPopup(auth, provider);
-        console.log('Inicio de sesión con Google exitoso');
-    
-        navigate('/home');
-        } catch (error) {
-        console.error('Error al iniciar sesión con Google', error.message);
-        }
-    };
+const LoginPage = () => {
+const navigate = useNavigate();
 
-    return (
-        <div className="login-container">
-        <img src={logoMood} alt="Logo" className="logo" />
+const handleGoogleLogin = async () => {
+    try {
+    const provider = new GoogleAuthProvider();
+    await signInWithPopup(auth, provider);
+    console.log('Inicio de sesión con Google exitoso');
 
-        <button className="login-button">
-            <FaPhone /> Iniciar sesión con número de celular
-        </button>
+    navigate('/home');
+    } catch (error) {
+    console.error('Error al iniciar sesión con Google', error.message);
+    }
+};
 
-        <button className="login-button" onClick={handleGoogleLogin}>
-            <FaGoogle /> Iniciar sesión con Google
-        </button>
+return (
+    <div className="login-container">
+    <img src={logoMood} alt="Logo" className="logo" />
 
-        <a href="#" className="register-link">
-            Regístrate
-        </a>
-        </div>
-    );
-    };
+    <button className="login-button">
+        <FaPhone /> Iniciar sesión con número de celular
+    </button>
 
-    export default LoginPage;
+    <button className="login-button" onClick={handleGoogleLogin}>
+        <FaGoogle /> Iniciar sesión con Google
+    </button>
+
+    <a href="#" className="register-link">
+        Regístrate
+    </a>
+    </div>
+);
+};
+
+export default LoginPage;

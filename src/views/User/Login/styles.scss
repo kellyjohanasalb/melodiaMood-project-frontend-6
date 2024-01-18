@@ -1,7 +1,7 @@
 @use '../../../styles/variables' as *;
 @use '../../../styles/mixins' as *;
 
-.login-container {
+.login-form {
     width: $mobile-width;
     height: $mobile-height;
     display: flex;
@@ -12,7 +12,6 @@
     background: $color-11;
     border: 2px solid ;
     border-radius: 20px;
-
     }
 
     .logo {
