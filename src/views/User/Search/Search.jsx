@@ -23,7 +23,7 @@ function Search() {
   
   return (
     <main className="container-search-major">
-      <header className="container-search-major-header">
+      <header className="container-search-major-header ">
         <h1>Search</h1>
         <input
           className="Search"
