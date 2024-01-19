@@ -49,13 +49,15 @@
             margin-left: 24px;
             border: none;
             display: grid;
-            
+            &:focus{
+                border-color: $color-8;
+            }
         }
         .magnifying-glass{
             width: 56px;
             height: 36px;
             margin-left: 24px;
-           margin-top: -53px;
+            margin-top: -53px;
         }
     }
     .container-search-moods{
@@ -301,6 +303,5 @@
                 }
             }
         }
-    }
-    
+    }   
 }

@@ -5,22 +5,34 @@
   width: 66%;
   height: 51px;
   display: flex;
-  justify-content: space-around; /* Ajusta el espacio entre los elementos */
-  align-items: flex-start; /* Alinea los elementos en la parte inferior */
+  justify-content: space-around;
+  align-items: flex-start;
   position: absolute;
   margin-top: 679px;
+
+  @media screen and (min-width: $desktop-width) {
+    width: 100%; // Ajusta el ancho según tus necesidades para escritorio
+    margin-top: 0; // Ajusta el margen superior según tus necesidades para escritorio
+  }
 }
 
 .navabr-container-principal-1,
 .navabr-container-principal-2,
 .navabr-container-principal-3 {
- /*  width: 40px;
-  height: 20px; */
-  flex: 3px;
+  flex: 3; // Modifiqué el valor del flex
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @media screen and (min-width: $desktop-width) {
+    flex: 3; // Modifiqué el valor del flex
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 745px;
+  }
 }
 
 .home,
@@ -29,13 +41,26 @@
   width: 25px;
   height: 20px;
   font-size: 24px;
-  color: $color-7;
+  color: $color-7;  
+  
+  @media screen and (min-width: $desktop-width) {
+    width: 30px;
+    height: 50px;
+    font-size: 24px;
+    color: $color-7;
+  }
 }
 
 .ho,
 .search-1,
 .your {
-  color: $color-7; /* Color del texto */
-  font-size: 8px; /* Tamaño del texto */
-  margin-top: 2px; /* Ajusta la separación entre el icono y el texto */
+  color: $color-7;
+  font-size: 8px;
+  margin-top: 2px;
+  
+  @media screen and (min-width: $desktop-width) {
+    color: $color-7;
+    font-size: 8px;
+    margin-top: 2px;
+  }
 }

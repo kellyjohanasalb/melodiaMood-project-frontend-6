@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setSongs } from "../../../store/search/searchSlice";
+import { setSongs, setSearch } from "../../../store/search/searchSlice";
 import { getData  } from '../../../store/search/searchAction'
 import { CiSearch } from "react-icons/ci";
 import "./styles.scss";
@@ -7,28 +7,29 @@ import Navbar from "../../../components/User/Navbar/Navbar";
 
 function Search() {
   const dispatch = useDispatch();
-  const searchSongs = useSelector((state) => state.search.searchsongs);
- /*  const isLoading = useSelector((state) => state.search.isLoading);
-  const isError = useSelector((state) => state.search.isError); */
- 
-  const handleSearch = () => {
-    dispatch(getData(searchSongs));
-  };
+ /*  const searchSongs = useSelector((state) => state.search.searchsongs); */
+ const search = useSelector((state) => state.search.search);
+
+ const handleSearch = () => {
+  dispatch(getData(search));
+};
   
- /*  const handleInputChange = (e) => {
-    dispatch(setSearchTerm(e.target.value));
-  }; */
+  const handleSongs = (e) => {
+    dispatch(setSongs(e.target.value));
+  }; 
+
+  
 
   
   return (
     <main className="container-search-major">
-      <header className="container-search-major-header">
+      <header className="container-search-major-header ">
         <h1>Search</h1>
         <input
           className="Search"
           type="text"
-          value={searchSongs}
-          onChange={(e) => dispatch(setSongs(e.target.value))}
+          value={search}
+          onChange={handleSongs}
           placeholder="               Artists, songs, or podcast"
         />
         <CiSearch className="magnifying-glass" onClick={handleSearch} />

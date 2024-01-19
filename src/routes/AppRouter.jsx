@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 /* import PublicRoutes from "./PublicRoutes.jsx";
 import PrivatedRoutes from "./PrivateRoutes.jsx"; */
 /* import { useDispatch, useSelector } from 'react-redux' */
-
 import Home from "../views/User/Home/Home.jsx";
 import NowPlaying from "../views/User/NowPlaying/NowPlaying.jsx";
 import Library from "../views/User/Library/Library.jsx";
