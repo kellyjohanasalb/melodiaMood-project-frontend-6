@@ -1,42 +1,52 @@
-@use '../../../styles/variables' as *;
-@use '../../../styles/mixins' as *;
+@use '../../../styles/variables'as *;
+@use '../../../styles/mixins'as *;
 
-    .settings-container {
+.settings-container {
     width: $mobile-width;
-    height: $mobile-height;    
+    height: $mobile-height;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 20px; /* Ajusta el espacio respecto al margen superior */
+    padding: 50px 20px;
     background: $color-11;
-    border: 2px solid ;
+    border: 2px solid;
     border-radius: 20px;
-    }
+}
 
-    .settings-header {
+.settings-header {
+    width: 38%;
+    height: 3%;
+    display: flex;
+    align-items: center;
+    margin-bottom: -11px;
+    /* Ajusta el espacio entre la imagen y el título */
+}
+
+.settings-header-back-icon {
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     width: 100%;
-    margin-bottom: 40px; /* Ajusta el espacio entre la imagen y el título */
+    margin-bottom: 40px;
 
     .back-icon {
         font-size: 20px;
         color: $color-6;
         cursor: pointer;
         margin-right: 20px;
-        margin-top: -50px;
+        margin-top: -12px;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $color-7;
+        }
     }
 
+}
 
-    h1 {
-        font-size: 24px;
-        color: $color-1;
-        margin-left: 20px;
-        margin-top: -50px;
-    }
-    }
-
-    .settings-content {
+.settings-content {
     width: 100%;
     max-width: 600px;
     background-color: $color-7;
@@ -44,11 +54,10 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    }
+}
 
-    .settings-section {
+.settings-section {
     margin-bottom: 20px;
-
     h2 {
         font-size: 20px;
         color: $color-9;
@@ -61,14 +70,13 @@
         border-radius: 5px;
         margin-bottom: 10px;
         cursor: pointer;
-
         p {
-        margin: 0;
+            margin: 0;
         }
     }
-    }
+}
 
-    .logout-button {
+.logout-button {
     padding: 15px;
     background-color: $color-9;
     color: $color-7;
@@ -80,22 +88,57 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 600px; 
+    max-width: 600px;
     text-align: center;
     transition: background-color 0.3s ease;
-
     svg {
         margin-right: 10px;
     }
-
     &:hover {
         background-color: darken($color-4, 10%);
     }
-    }
+}
 
-    @media screen and (min-width: 768px) {
-        .settings-container {
-          width: $desktop-width;
-          height: $desktop-height;
+@media screen and (min-width: 768px) {
+    .settings-container {
+        width: $desktop-width;
+        height: $desktop-height;
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background: $color-11;
+    border: 2px solid;
+    border-radius: 20px;
+    }
+    .settings-header {
+        width: 13%;
+        height: 3%;
+        display: flex;
+        align-items: center;
+        margin-bottom: -11px;
+        /* Ajusta el espacio entre la imagen y el título */
+    }
+    .settings-header-back-icon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 40px;
+    
+        .back-icon {
+            font-size: 30px;
+            color: $color-6;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-top: -31px;
+            &:hover,
+            &:active,
+            &:focus {
+                color: $color-7;
+            }
         }
-      }
+    
+    }
+}

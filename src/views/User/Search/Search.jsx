@@ -71,8 +71,8 @@ function Search() {
             <span className="at">At Home</span>
           </button>
         </div>
+       {/*  <Navbar /> */}
       </section>
-      <Navbar />
     </main>
   );
 }

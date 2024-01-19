@@ -1,85 +1,156 @@
-@use '../../../styles/variables' as *;
-@use '../../../styles/mixins' as *;
+@use '../../../styles/variables'as *;
+@use '../../../styles/mixins'as *;
 
-.container-search-major{
+.container-search-major {
     width: 400px;
     height: 752px;
     background: $color-11;
-    border: 2px solid ;
+    border: 2px solid;
     border-radius: 20px;
     display: grid;
+
     @media screen and (min-width: $desktop-width) {
-        .container-search-major {
-          width: $desktop-width;
-          height: $desktop-height;
-          background-color: $color-6;
-          border-radius: 35px;
-          display: grid;
-        }
-      }
-    .container-search-major-header{
+        width: $desktop-width;
+        height: $desktop-height;
+        background: $color-11;
+        border: 2px solid;
+        border-radius: 20px;
+        display: grid;
+    }
+
+    .container-search-major-header {
         width: 388px;
         height: 1px;
         display: grid;
+
         @media screen and (min-width: $desktop-width) {
-            .container-search-major-header {
-              width: $desktop-width;
-              height: $desktop-height;
-              background-color: $color-6;
-              border-radius: 35px;
-              display: grid;
-            }
-          }
-        h1{
-          width: 128px;  
-          font-family: $font-source;
-          font-size: 42px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          letter-spacing: -3.36px;
-          color: $color-7;
-          margin-left: 24px;
-          margin-top: 30px;
+            width: 944px;
+            height: 1px;
+            display: grid;
+            align-items: center;
+            margin-left: 84px;
         }
-        .Search{
+
+        h1 {
+            width: 128px;
+            font-family: $font-source;
+            font-size: 42px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -3.36px;
+            color: $color-7;
+            margin-left: 24px;
+            margin-top: 30px;
+
+            @media screen and (min-width: $desktop-width) {
+                width: 128px;
+                font-family: $font-source;
+                font-size: 42px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: -3.36px;
+                color: $color-7;
+                margin-left: 24px;
+                margin-top: 30px;
+            }
+        }
+
+        .Search {
             width: 386;
             height: 63px;
             border-radius: 8px;
             margin-left: 24px;
             border: none;
             display: grid;
-            &:focus{
+
+            @media screen and (min-width: $desktop-width) {
+                width: 919px;
+                height: 63px;
+                border-radius: 8px;
+                margin-left: 24px;
+                border: none;
+                display: grid;
+            }
+
+            &:focus {
                 border-color: $color-8;
             }
         }
-        .magnifying-glass{
+
+        .magnifying-glass {
             width: 56px;
             height: 36px;
             margin-left: 24px;
             margin-top: -53px;
         }
+
+        .magnifying-glass {
+            width: 56px;
+            height: 36px;
+            margin-left: 24px;
+            margin-top: -53px;
+
+            @media screen and (min-width: $desktop-width) {
+                width: 56px;
+                height: 36px;
+                margin-left: 24px;
+                margin-top: -70px;
+            }
+        }
+
     }
-    .container-search-moods{
+
+    .container-search-moods {
         width: 374px;
         height: 213px;
         display: grid;
         margin-left: 14px;
         margin-top: -19px;
         color: $color-7;
-        h3{
+
+        @media screen and (min-width: $desktop-width) {
+            width: 820px;
+            height: 276px;
+            display: grid;
+            margin-left: 146px;
+            margin-top: -16px;
+            color: $color-7;
+        }
+
+        h3 {
             height: 36px;
             font-family: $font-source;
             font-size: 22px;
             font-weight: 700;
+
+            @media screen and (min-width: $desktop-width) {
+                height: 36px;
+                font-family: $font-source;
+                font-size: 47px;
+                font-weight: 700;
+            }
         }
-        .emotions{
+
+        .emotions {
             width: 384px;
             height: 2px;
             display: grid;
             margin-top: -12px;
             @include flexCenter(row, space-between, center);
-            .emotions-happy{
+
+            @media screen and (min-width: $desktop-width) {
+                width: 560px;
+                height: 107px;
+                display: grid;
+                margin-top: -12px;
+                gap: 67px;
+                margin-left: 200px;
+                @include flexCenter(row, space-between, center);
+            }
+
+            .emotions-happy {
                 width: 172px;
                 height: 92px;
                 background-color: $color-9;
@@ -90,7 +161,23 @@
                 border: none;
                 display: grid;
                 margin-left: 1px;
-                .alegria{
+               
+                @media screen and (min-width: $desktop-width) {
+                    width: 450px;
+                    height: 169px;
+                    background-color: $color-9;
+                    border-radius: 6px;
+                    margin-top: 64px;
+                    align-items: center;
+                    margin-left: 70px;
+                    border: none;
+                    display: grid;
+                    margin-left: 1px;
+                    align-content: center;
+                    gap: 20px;
+                }
+
+                .alegria {
                     width: 35px;
                     height: 20px;
                     font-family: $font-source;
@@ -100,9 +187,22 @@
                     margin-right: 84px;
                     margin-bottom: 77px;
                     margin-left: 10px;
+
+                    @media screen and (min-width: $desktop-width) {
+                        width: 35px;
+                        height: 20px;
+                        font-family: $font-source;
+                        font-size: 33px;
+                        font-weight: 700;
+                        color: $color-7;
+                        margin-right: 84px;
+                        margin-bottom: 77px;
+                        margin-left: 10px;
+                    }
                 }
             }
-            .emotions-anxiety{
+
+            .emotions-anxiety {
                 width: 172px;
                 height: 92px;
                 background-color: $color-10;
@@ -112,7 +212,22 @@
                 border: none;
                 display: grid;
                 margin-right: 18px;
-                .Ansiedad{
+                @media screen and (min-width: $desktop-width) {
+                    width:  560px;;
+                    height: 169px;
+                    background-color: $color-10;
+                    border-radius: 6px;
+                    margin-top: 64px;
+                    align-items: center;
+                    margin-left: 70px;
+                    border: none;
+                    display: grid;
+                    margin-left: -56px;
+                    align-content: center;
+                    gap: 10px;
+                }
+
+                .Ansiedad {
                     width: 35px;
                     height: 20px;
                     font-family: $font-source;
@@ -122,33 +237,48 @@
                     margin-right: 84px;
                     margin-bottom: 79px;
                     margin-left: 10px;
+                    @media screen and (min-width: $desktop-width) {
+                        width: 35px;
+                        height: 20px;
+                        font-family: $font-source;
+                        font-size: 33px;
+                        font-weight: 700;
+                        color: $color-7;
+                        margin-right: 84px;
+                        margin-bottom: 77px;
+                        margin-left: 10px;
+                    }
                 }
-            }  
+            }
         }
     }
-    .container-search-browse{
+
+    .container-search-browse {
         width: 365px;
         height: 12px;
         display: grid;
         margin-left: 14px;
         margin-top: -247px;
         color: $color-7;
-        h3{
+
+        h3 {
             height: 36px;
             font-family: $font-source;
             font-size: 20px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-            letter-spacing: -1.2px; 
+            letter-spacing: -1.2px;
         }
-        .browse{
+
+        .browse {
             width: 384px;
             height: 130px;
             display: grid;
             margin-top: -80px;
             @include flexCenter(row, space-between, center);
-            .browse-podcast{
+
+            .browse-podcast {
                 width: 172px;
                 height: 92px;
                 background-color: $color-3;
@@ -159,7 +289,8 @@
                 display: grid;
                 margin-right: 18px;
                 margin-top: 118px;
-                .podcast{
+
+                .podcast {
                     width: 35px;
                     height: 20px;
                     font-family: $font-source;
@@ -168,10 +299,11 @@
                     color: $color-7;
                     margin-right: 84px;
                     margin-bottom: 79px;
-                    margin-left: 10px;  
+                    margin-left: 10px;
                 }
             }
-            .new-realse{
+
+            .new-realse {
                 width: 172px;
                 height: 92px;
                 background-color: $color-1;
@@ -182,7 +314,8 @@
                 display: grid;
                 margin-right: 18px;
                 margin-top: 118px;
-                .new{
+
+                .new {
                     width: 35px;
                     height: 20px;
                     font-family: $font-source;
@@ -191,17 +324,19 @@
                     color: $color-7;
                     margin-right: 84px;
                     margin-bottom: 79px;
-                    margin-left: 10px;  
+                    margin-left: 10px;
                 }
             }
         }
-        .container-browse{
+
+        .container-browse {
             width: 384px;
             height: 130px;
             display: grid;
             margin-top: -19px;
             @include flexCenter(row, space-between, center);
-            .new-emotions{
+
+            .new-emotions {
                 width: 172px;
                 height: 92px;
                 background-color: $color-4;
@@ -212,7 +347,8 @@
                 display: grid;
                 margin-right: 18px;
                 margin-top: 118px;
-                .emo{
+
+                .emo {
                     width: 35px;
                     height: 20px;
                     font-family: $font-source;
@@ -221,10 +357,11 @@
                     color: $color-7;
                     margin-right: 84px;
                     margin-bottom: 79px;
-                    margin-left: 10px;  
+                    margin-left: 10px;
                 }
             }
-            .for-you{
+
+            .for-you {
                 width: 172px;
                 height: 92px;
                 background-color: $color-2;
@@ -235,7 +372,8 @@
                 display: grid;
                 margin-right: 18px;
                 margin-top: 118px;
-                .you{
+
+                .you {
                     width: 35px;
                     height: 34px;
                     font-family: $font-source;
@@ -245,18 +383,20 @@
                     margin-right: 84px;
                     margin-bottom: 79px;
                     margin-left: 10px;
-                    display: flex;  
+                    display: flex;
                     align-items: center;
                 }
             }
         }
-        .conatiner-minor{
+
+        .conatiner-minor {
             width: 384px;
             height: 130px;
             display: grid;
             margin-top: -19px;
             @include flexCenter(row, space-between, center);
-            .calm-minor{
+
+            .calm-minor {
                 width: 172px;
                 height: 92px;
                 background-color: $color-9;
@@ -267,7 +407,8 @@
                 display: grid;
                 margin-right: 18px;
                 margin-top: 118px;
-                .calm{
+
+                .calm {
                     width: 35px;
                     height: 20px;
                     font-family: $font-source;
@@ -276,10 +417,11 @@
                     color: $color-7;
                     margin-right: 84px;
                     margin-bottom: 79px;
-                    margin-left: 10px;  
+                    margin-left: 10px;
                 }
             }
-            .home{
+
+            .home {
                 width: 172px;
                 height: 92px;
                 background-color: $color-10;
@@ -290,7 +432,8 @@
                 display: grid;
                 margin-right: 18px;
                 margin-top: 118px;
-                .at{
+
+                .at {
                     width: 35px;
                     height: 20px;
                     font-family: $font-source;
@@ -299,9 +442,9 @@
                     color: $color-7;
                     margin-right: 84px;
                     margin-bottom: 79px;
-                    margin-left: 10px;  
+                    margin-left: 10px;
                 }
             }
         }
-    }   
+    }
 }

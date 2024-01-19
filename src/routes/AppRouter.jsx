@@ -30,7 +30,7 @@ function AppRouter() {
       <Routes>
         <Route path="/">
          <Route>
-            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/" element={<Welcome />} />
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/now-playing" element={<NowPlaying />} />

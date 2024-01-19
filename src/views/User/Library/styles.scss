@@ -1,16 +1,27 @@
-@use '../../../styles/variables' as *;
+ @use '../../../styles/variables' as *;
 @use '../../../styles/mixins' as *;
 
     .library-container {
     width: $mobile-width;
-    height: $mobile-height;
+    height: 721px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 20px;
+    padding: 92px 14px;
     background: $color-11;
     }
-
+    .library-header-mylibrary{
+        h1 {
+            font-size: 24px;
+            color: $color-1;
+            margin-left: 20px;
+            margin-top: -81px;
+            align-items: center;
+            display: grid;
+            @include flexCenter(row, flex-start, center)
+            
+        }
+    }
     .library-header {
     display: flex;
     align-items: center;
@@ -23,20 +34,18 @@
         cursor: pointer;
         margin-right: 20px;
         margin-top: -50px;
-    }
-
-    h1 {
-        font-size: 24px;
-        color: $color-1;
-        margin-left: 20px;
-        margin-top: -50px;
+        &:hover,
+            &:active,
+            &:focus {
+              color: $color-7;
+            }
     }
     }
 
     .library-section {
-    width: 100%;
-    max-width: 600px; 
-    margin-bottom: 30px;
+    width: 97%;
+    /* max-width: 600px; */ 
+    margin-bottom: 63px;
     }
 
     h2 {
@@ -97,3 +106,4 @@
             margin-bottom: 15px;
             }
       }
+      
