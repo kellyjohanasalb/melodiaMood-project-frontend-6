@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FaArrowLeft, FaEnvelope, FaUser, FaPhone, FaSmile } from 'react-icons/fa';
 import logoMood from '../../../assets/img/logo-mood.png';
 import './styles.scss';
@@ -6,7 +7,7 @@ const SignUp = () => {
   return (
     <div className="signup-container">
       <div className="signup-header">
-        <FaArrowLeft className="back-icon" />
+        <Link to="/login"><FaArrowLeft className="back-icon" /></Link>
         <img src={logoMood} alt="Logo" className="logo" />
       </div>
 

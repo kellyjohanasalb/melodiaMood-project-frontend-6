@@ -21,11 +21,20 @@
     margin-bottom: 40px; /* Ajusta el espacio entre la imagen y el formulario */
 
     .back-icon {
-        font-size: 20px;
-        color: $color-9;
-        cursor: pointer;
-        margin-top: -200px; /* Ajusta la posición vertical de la flecha */
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      color: $color-9;
+      cursor: pointer;
+      margin-top: -200px; /* Ajusta la posición vertical de la flecha */
+    
+      &:hover,
+      &:active,
+      &:focus {
+        color: $color-7;
+      }
     }
+    
 
     .logo {
         width: 150px; /* Ajusta el tamaño de la imagen */

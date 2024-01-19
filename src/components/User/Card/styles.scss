@@ -2,17 +2,23 @@
 @use '../../../styles/mixins' as *;
  
 .Card-container {
-  width: $mobile-width;
-  height: $mobile-height; 
+  width: 383px;
+  height: 197px; 
   display: flex; 
   overflow-x: hidden; 
   @include removeScrollBar;
   padding-bottom: 20px; 
   margin-left: 10px;
-
+  margin-top: 9px;
   @media screen and (min-width: $desktop-width) {
     width: $desktop-width;
-    height: $desktop-height;
+    height: $desktop-height; 
+    display: flex; 
+    overflow-x: hidden; 
+    @include removeScrollBar;
+    padding-bottom: 20px; 
+    margin-left: 74px;
+    margin-top: 20px;
   }
 }
 
@@ -22,7 +28,6 @@
   flex-wrap: nowrap;
   overflow-x: hidden; 
   @include removeScrollBar;
-
   @media screen and (min-width: $desktop-width) {
     width: $desktop-width;
     height: $desktop-height;

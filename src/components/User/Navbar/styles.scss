@@ -1,50 +1,60 @@
-@use '../../../styles/variables' as *;
-@use '../../../styles/mixins' as *;
+@use '../../../styles/variables'as *;
+@use '../../../styles/mixins'as *;
 
 .navbar-container-Principal {
-  width: 66%;
-  height: 51px;
-  display: flex;
+  width: 67%;
+  height: 37px;
+  display: grid;
+  @include flexCenter(row, space-between, center);
   justify-content: space-around;
   align-items: flex-start;
   position: absolute;
-  margin-top: 679px;
+  margin-top: -11px;
 
   @media screen and (min-width: $desktop-width) {
-    width: 100%; // Ajusta el ancho según tus necesidades para escritorio
-    margin-top: 0; // Ajusta el margen superior según tus necesidades para escritorio
+    width: 100%;
+    display: grid;
+    @include flexCenter(row, space-between, center);
+    justify-content: space-around;
+    align-items: flex-start;
+    position: absolute;
+    margin-top: 103px;
   }
 }
 
 .navabr-container-principal-1,
 .navabr-container-principal-2,
 .navabr-container-principal-3 {
-  flex: 3; // Modifiqué el valor del flex
-  display: flex;
-  justify-content: center;
+  width: 64%;
+  height: 70px;
+  display: grid;
+  @include flexCenter(column, center, center);
+  align-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
 
   @media screen and (min-width: $desktop-width) {
-    flex: 3; // Modifiqué el valor del flex
-    display: flex;
-    justify-content: center;
+    width: 100px;
+    height: 70px;
+    display: grid;
+    @include flexCenter(column, center, center);
+    align-content: center;
+    justify-content: flex-start;
     align-items: center;
-    flex-direction: column;
-    margin-top: 745px;
+
   }
 }
 
 .home,
 .search,
 .library {
-  width: 25px;
+  width: 26px;
   height: 20px;
   font-size: 24px;
-  color: $color-7;  
-  
+  color: $color-7;
+
   @media screen and (min-width: $desktop-width) {
-    width: 30px;
+    width: 40px;
     height: 50px;
     font-size: 24px;
     color: $color-7;
@@ -54,13 +64,24 @@
 .ho,
 .search-1,
 .your {
+  width: 10px;
   color: $color-7;
   font-size: 8px;
-  margin-top: 2px;
-  
+    margin-left: -17px;
+    margin-top: 0px;
+    display: grid;
+    @include flexCenter(column, center, center);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
   @media screen and (min-width: $desktop-width) {
     color: $color-7;
     font-size: 8px;
-    margin-top: 2px;
+    margin-left: -4px;
+    display: grid;
+    @include flexCenter(column, center, center);
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
   }
 }

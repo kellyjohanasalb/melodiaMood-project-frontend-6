@@ -41,3 +41,22 @@ export const getDataBySongs = () => {
     }
   };
 };
+
+export const getDataByFilter = (searchText) => {
+  return async (dispatch) => {
+    try {
+      const tempArr = []      
+      const response = await getDocs(songsCollection)
+      response.forEach((item) => {
+        tempArr.push({ songs: item.data, ...item.data(songsCollection) })
+      });
+      const filteredArr = tempArr.filter((item) => item.songs.toLowerCase().includes(searchText.toLowerCase()));
+      dispatch(setSearch(filteredArr));
+    } catch (error) {
+      dispatch(
+        setError({ error: true, code: error.code, message: error.message })
+      );
+      dispatch(setLoading(false));
+    }
+  };
+};

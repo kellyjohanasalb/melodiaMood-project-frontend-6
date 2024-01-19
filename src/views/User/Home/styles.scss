@@ -1,5 +1,5 @@
-@use '../../../styles/variables' as *;
-@use '../../../styles/mixins' as *;
+@use '../../../styles/variables'as *;
+@use '../../../styles/mixins'as *;
 
 .container-home {
   width: $mobile-width;
@@ -12,6 +12,10 @@
   @media screen and (min-width: $desktop-width) {
     width: $desktop-width;
     height: $desktop-height;
+    background: $color-11;
+    border: 2px solid;
+    border-radius: 20px;
+    font-family: $font-source;
   }
 }
 
@@ -23,57 +27,140 @@
   align-items: center;
   justify-content: space-between;
   padding: 11px;
-  background-color: $color-11;
-  color: #fff;
+  /* background-color: $color-11; */
+  color: $color-7;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 9px;
 
   @media screen and (min-width: $desktop-width) {
-    width: 100%; /* Ajusta el ancho para escritorio según tus necesidades */
-    margin-left: 0; /* Ajusta el margen izquierdo para escritorio según tus necesidades */
+    width: 98%;
+    height: 73px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px;
+    /*  background-color: $color-11; */
+    color: $color-7;
+    margin-left: 20px;
+    margin-top: 20px;
   }
 }
+
 
 .imgen-profile {
   width: 40px;
   height: 40px;
   margin-top: 10px;
+  @media screen and (min-width: $desktop-width) {
+    width: 50px;
+    height: 50px;
+    /* gap: 5px; */
+  }
 }
 
 .all,
 .Music {
   width: 70px;
   height: 20px;
-  border-radius: 5px;
+  border-radius: 20px;
   border: none;
+  cursor: pointer;
   background-color: $color-13;
   margin-top: 10px;
-  @media screen  and (min-width: $desktop-width){
-    width: 30%;
-    height: 22px;
-    gap: 5px;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-14;
+  }
+  @media screen and (min-width: $desktop-width) {
+    width: 244px;
+    height: 33px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: $color-13;
+    margin-top: 10px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-14;
+    }
   }
 }
 
 .interations {
+  width: 15%;
+  height: 0;
   display: flex;
+  /* cursor: pointer; */
   align-items: center;
+  gap: 5px;
+  margin-right: 18px;
+
+  /*   &:hover,
+  &:active,
+  &:focus {
+    color: $color-14;
+  } */
+  @media screen and (min-width: $desktop-width) {
+    width: 11%;
+    height: 0;
+    /* cursor: pointer; */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 5px;
+    margin-right: 17px;
+    /* &:hover,
+    &:active,
+    &:focus {
+      color: $color-14;
+    } */
+  }
 }
 
-.interations > div {
+.interations>div {
   width: 26px;
   height: 10px;
   color: $color-7;
   align-items: center;
+  gap: 5px;
+
+  @media screen and (min-width: $desktop-width) {
+    width: 43px;
+    height: 20px;
+    color: $color-7;
+    align-items: center;
+  }
 }
 
-.interations > div .bell,
-.history,
-.settings {
+.interations>div 
+.bell,
+.history {
   width: 22px;
   height: 22px;
   gap: 5px;
+  @media screen and (min-width: $desktop-width) {
+    width: 30px;
+    height: 30px;
+    gap: 5px;
+  }
+}
+.settings {
 
+  width: 26px;
+  height: 26px;
+  color: $color-7;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+  @media screen and (min-width: $desktop-width) {
+    width: 30px;
+    height: 30px;
+    gap: 5px;
+  }
 }
 
 .container-home-body {
@@ -82,14 +169,23 @@
   display: grid;
 
   @media screen and (min-width: $desktop-width) {
-    width: 100%; /* Ajusta el ancho para escritorio según tus necesidades */
+    width: 414px;
+    height: 718px;
+    display: grid;
+
   }
 }
 
-.container-home-body > div {
+.container-home-body>div {
   width: 414px;
   height: 227px;
   margin-bottom: -27px;
+  @media screen and (min-width: $desktop-width) {
+    width: 475px;
+    height: 245px;
+    margin-bottom: -27px;
+
+  }
 }
 
 .container-home-body,
@@ -97,18 +193,22 @@
 .container-home-body-2,
 .container-home-body-3,
 span {
-  width: 20px;
-  height: 20px;
-  font-size: 1.3em;
   font-weight: bold;
   margin-left: 5px;
-  margin-top: 28px;
+  margin-top: -3px;
   color: $color-7;
   font-family: $font-source;
   font-size: 15px;
-
   @media screen and (min-width: $desktop-width) {
-    font-size: 18px; /* Ajusta el tamaño del texto para escritorio según tus necesidades */
+   
+    font-size: 18px;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top: 28px;
+    color: $color-7;
+    font-family: $font-source;
+    font-size: 16px;
   }
 }
 
