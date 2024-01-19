@@ -48,7 +48,7 @@
 }
 
 
-.imgen-profile {
+.imgen-profile-icon {
   width: 40px;
   height: 40px;
   margin-top: 10px;
@@ -56,6 +56,17 @@
     width: 50px;
     height: 50px;
     /* gap: 5px; */
+  }
+  .imgen-profile{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    @media screen and (min-width: $desktop-width) {
+      width: 50px;
+      height: 50px;
+      margin-top: 2px;
+      color: $color-7;
+    }
   }
 }
 

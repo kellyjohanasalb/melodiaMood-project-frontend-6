@@ -13,7 +13,9 @@ function Home() {
   return (
     <main className="container-home ">
       <header className="contianer-header-home">
+      <Link to="/profile"  className="imgen-profile-icon">
       <RxAvatar className="imgen-profile" />
+      </Link>
       <button className='all'>Todas</button>
       <button className='Music'>Música</button>
         <section className="interations">
