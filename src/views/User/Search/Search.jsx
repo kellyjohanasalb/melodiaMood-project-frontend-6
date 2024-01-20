@@ -49,7 +49,7 @@ function Search() {
         <h3>Browse-all</h3>
         <div className="browse">
           <button className="browse-podcast">
-            <span className="podcast">podcast</span>
+            <span className="podcast">Podcast</span>
           </button>
           <button className="new-realse">
             <span className="new">New Releases</span>

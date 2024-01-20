@@ -22,7 +22,6 @@
         width: 388px;
         height: 1px;
         display: grid;
-
         @media screen and (min-width: $desktop-width) {
             width: 944px;
             height: 1px;
@@ -84,13 +83,6 @@
             height: 36px;
             margin-left: 24px;
             margin-top: -53px;
-        }
-
-        .magnifying-glass {
-            width: 56px;
-            height: 36px;
-            margin-left: 24px;
-            margin-top: -53px;
 
             @media screen and (min-width: $desktop-width) {
                 width: 56px;
@@ -112,9 +104,9 @@
 
         @media screen and (min-width: $desktop-width) {
             width: 820px;
-            height: 276px;
+            height: 252px;
             display: grid;
-            margin-left: 146px;
+            margin-left: 56px;
             margin-top: -16px;
             color: $color-7;
         }
@@ -124,7 +116,6 @@
             font-family: $font-source;
             font-size: 22px;
             font-weight: 700;
-
             @media screen and (min-width: $desktop-width) {
                 height: 36px;
                 font-family: $font-source;
@@ -139,14 +130,13 @@
             display: grid;
             margin-top: -12px;
             @include flexCenter(row, space-between, center);
-
             @media screen and (min-width: $desktop-width) {
-                width: 560px;
+                width: 816px;
                 height: 107px;
                 display: grid;
                 margin-top: -12px;
-                gap: 67px;
-                margin-left: 200px;
+                /* gap: 60px; */
+                margin-left: -24px;
                 @include flexCenter(row, space-between, center);
             }
 
@@ -161,18 +151,17 @@
                 border: none;
                 display: grid;
                 margin-left: 1px;
-               
                 @media screen and (min-width: $desktop-width) {
-                    width: 450px;
+                    width: 260px;
                     height: 169px;
                     background-color: $color-9;
                     border-radius: 6px;
                     margin-top: 64px;
                     align-items: center;
-                    margin-left: 70px;
+                    margin-left: 196px;
                     border: none;
                     display: grid;
-                    margin-left: 1px;
+                  /*   margin-left: 1px; */
                     align-content: center;
                     gap: 20px;
                 }
@@ -187,7 +176,6 @@
                     margin-right: 84px;
                     margin-bottom: 77px;
                     margin-left: 10px;
-
                     @media screen and (min-width: $desktop-width) {
                         width: 35px;
                         height: 20px;
@@ -212,19 +200,20 @@
                 border: none;
                 display: grid;
                 margin-right: 18px;
+
                 @media screen and (min-width: $desktop-width) {
-                    width:  560px;;
+                    width: 260px;
                     height: 169px;
                     background-color: $color-10;
                     border-radius: 6px;
                     margin-top: 64px;
                     align-items: center;
-                    margin-left: 70px;
+                 /*    margin-left: 70px; */
                     border: none;
                     display: grid;
-                    margin-left: -56px;
+                    margin-left: -213px;
                     align-content: center;
-                    gap: 10px;
+                   /*  gap: 10px; */
                 }
 
                 .Ansiedad {
@@ -237,6 +226,7 @@
                     margin-right: 84px;
                     margin-bottom: 79px;
                     margin-left: 10px;
+
                     @media screen and (min-width: $desktop-width) {
                         width: 35px;
                         height: 20px;
@@ -260,7 +250,14 @@
         margin-left: 14px;
         margin-top: -247px;
         color: $color-7;
-
+        @media screen and (min-width: $desktop-width) {
+            width: 726px;
+            height: 274px;
+            display: grid;
+            margin-left: 116px;
+            margin-top: -274px;
+            color: $color-7;
+        }
         h3 {
             height: 36px;
             font-family: $font-source;
@@ -269,6 +266,15 @@
             font-weight: 700;
             line-height: normal;
             letter-spacing: -1.2px;
+            @media screen and (min-width: $desktop-width) {
+                height: 41px;
+                font-family: $font-source;
+                font-size: 53px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: -1.8px;
+            }
         }
 
         .browse {
@@ -277,6 +283,13 @@
             display: grid;
             margin-top: -80px;
             @include flexCenter(row, space-between, center);
+            @media screen and (min-width: $desktop-width) {
+                width: 725px;
+                height: 160px;
+                display: grid;
+                margin-top: -41px;
+                @include flexCenter(row, space-between, center);
+            }
 
             .browse-podcast {
                 width: 172px;
@@ -289,7 +302,19 @@
                 display: grid;
                 margin-right: 18px;
                 margin-top: 118px;
-
+                @media screen and (min-width: $desktop-width) {
+                    width: 1901px;
+                    height: 133px;
+                    background-color: $color-3;
+                    border-radius: 6px;
+                    /* margin-top: -51px; */
+                    align-items: center;
+                    border: none;
+                    display: grid;
+                    margin-left: 110px;
+                    margin-top: 118px;
+                    margin-right: -102px;
+                }
                 .podcast {
                     width: 35px;
                     height: 20px;
@@ -300,6 +325,17 @@
                     margin-right: 84px;
                     margin-bottom: 79px;
                     margin-left: 10px;
+                    @media screen and (min-width: $desktop-width) {
+                        width: 35px;
+                        height: 20px;
+                        font-family: $font-source;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: $color-7;
+                        margin-right: 84px;
+                        margin-bottom: 79px;
+                        margin-left: 10px;
+                    }
                 }
             }
 
@@ -314,7 +350,18 @@
                 display: grid;
                 margin-right: 18px;
                 margin-top: 118px;
-
+                @media screen and (min-width: $desktop-width) {
+                    width: 1901px;
+                    height: 133px;
+                    background-color: $color-1;
+                    border-radius: 6px;
+                    margin-top: -51px;
+                    align-items: center;
+                    border: none;
+                    display: grid;
+                    margin-left: 180px;
+                    margin-top: 118px;
+                }
                 .new {
                     width: 35px;
                     height: 20px;
@@ -335,7 +382,15 @@
             display: grid;
             margin-top: -19px;
             @include flexCenter(row, space-between, center);
-
+            @media screen and (min-width: $desktop-width) {
+                width: 612px;
+                height: 160px;
+                display: grid;
+                margin-top: -23px;
+                @include flexCenter(row, space-between, center);
+                margin-left: 112px;
+                gap: 58px;
+            }
             .new-emotions {
                 width: 172px;
                 height: 92px;
@@ -347,7 +402,18 @@
                 display: grid;
                 margin-right: 18px;
                 margin-top: 118px;
-
+                @media screen and (min-width: $desktop-width) {
+                    width: 414px;
+                    height: 108px;
+                    background-color: $color-4;
+                    border-radius: 6px;
+                    margin-top: -51px;
+                    align-items: center;
+                    border: none;
+                    display: grid;
+                    margin-right: 18px;
+                    margin-top: 118px;
+                }
                 .emo {
                     width: 35px;
                     height: 20px;
@@ -358,6 +424,17 @@
                     margin-right: 84px;
                     margin-bottom: 79px;
                     margin-left: 10px;
+                    @media screen and (min-width: $desktop-width) {
+                        width: 35px;
+                        height: 20px;
+                        font-family: $font-source;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: $color-7;
+                        margin-right: 84px;
+                        margin-bottom: 79px;
+                        margin-left: 10px;
+                    }
                 }
             }
 
@@ -372,7 +449,18 @@
                 display: grid;
                 margin-right: 18px;
                 margin-top: 118px;
-
+                  @media screen and (min-width: $desktop-width) {
+                    width: 414px;
+                    height: 108px;
+                    background-color: $color-2;
+                    border-radius: 6px;
+                    margin-top: -51px;
+                    align-items: center;
+                    border: none;
+                    display: grid;
+                    margin-right: 18px;
+                    margin-top: 118px;
+                    }
                 .you {
                     width: 35px;
                     height: 34px;
@@ -385,6 +473,19 @@
                     margin-left: 10px;
                     display: flex;
                     align-items: center;
+                    @media screen and (min-width: $desktop-width) {
+                        width: 35px;
+                        height: 34px;
+                        font-family: $font-source;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: $color-7;
+                        margin-right: 84px;
+                        margin-bottom: 79px;
+                        margin-left: 10px;
+                        display: flex;
+                        align-items: center;;
+                        }
                 }
             }
         }
@@ -395,7 +496,15 @@
             display: grid;
             margin-top: -19px;
             @include flexCenter(row, space-between, center);
-
+            @media screen and (min-width: $desktop-width) {
+                width: 612px;
+                height: 160px;
+                display: grid;
+                margin-top: -23px;
+                @include flexCenter(row, space-between, center);
+                margin-left: 112px;
+                gap: 58px;
+            }
             .calm-minor {
                 width: 172px;
                 height: 92px;
@@ -407,7 +516,18 @@
                 display: grid;
                 margin-right: 18px;
                 margin-top: 118px;
-
+                @media screen and (min-width: $desktop-width) {
+                    width: 414px;
+                    height: 108px;
+                    background-color: $color-9;
+                    border-radius: 6px;
+                    margin-top: -51px;
+                    align-items: center;
+                    border: none;
+                    display: grid;
+                    margin-right: 18px;
+                    margin-top: 118px;
+                    }
                 .calm {
                     width: 35px;
                     height: 20px;
@@ -432,7 +552,18 @@
                 display: grid;
                 margin-right: 18px;
                 margin-top: 118px;
-
+                @media screen and (min-width: $desktop-width) {
+                    width: 414px;
+                    height: 108px;
+                    background-color: $color-10;
+                    border-radius: 6px;
+                    margin-top: -51px;
+                    align-items: center;
+                    border: none;
+                    display: grid;
+                    margin-right: 18px;
+                    margin-top: 118px;
+                    }
                 .at {
                     width: 35px;
                     height: 20px;
