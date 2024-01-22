@@ -1,15 +1,18 @@
 @use '../../../styles/variables'as *;
 @use '../../../styles/mixins'as *;
 
-.navbar-container-Principal {
+.footer-container-Principal {
   width: 67%;
   height: 37px;
   display: grid;
+  position: absolute;
+  bottom: -315px;
+/*   margin-top: -11px; */
+  z-index: 3;
   @include flexCenter(row, space-between, center);
   justify-content: space-around;
   align-items: flex-start;
-  position: absolute;
-  margin-top: -11px;
+ 
 
   @media screen and (min-width: $desktop-width) {
     width: 100%;
@@ -18,14 +21,15 @@
     justify-content: space-around;
     align-items: flex-start;
     position: absolute;
+    bottom: -511px;
     margin-top: 72px;
-    margin-left: 13px;
+    margin-left: -49px;
   }
 }
 
-.navabr-container-principal-1,
-.navabr-container-principal-2,
-.navabr-container-principal-3 {
+.footer-container-principal-1,
+.footer-container-principal-2,
+.footer-container-principal-3 {
   width: 64%;
   height: 70px;
   display: grid;

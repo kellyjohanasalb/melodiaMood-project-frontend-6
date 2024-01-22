@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { thunk } from 'redux-thunk';
-import searchReducer from './search/searchSlice';
+import songsReducer from "./songs/songsSlice";
 
 
 const store = configureStore({
   reducer: {
-    search: searchReducer
+    songs: songsReducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });
