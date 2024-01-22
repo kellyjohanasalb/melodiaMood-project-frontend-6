@@ -1,20 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const searchSlice = createSlice({
+const songsSlice = createSlice({
     name: 'search',
     initialState: {
         search: [],
         songs: [],
-        isLoading: true,
+        isLoading: false,
         isError: false,
     },
    reducers:{
     setSongs: (state, action) => {
-        state.songs = action.payload.songs;
+        state.songs = action.payload;
     },
     setSearch: (state, action) => {
         state.search = action.payload;
       },
+     /*  filterEmotions: (state, action) => {
+        state.songs = action.payload;
+      }, */
     setLoading: (state, action) => {
         state.isLoading = action.payload;
     },
@@ -24,6 +27,6 @@ const searchSlice = createSlice({
    },
 })
 
-export const { setSongs, setSearch, setLoading, setError } = searchSlice.actions
+export const { setSongs, setSearch, setLoading, setError } = songsSlice.actions
 
-export default searchSlice.reducer
+export default songsSlice.reducer

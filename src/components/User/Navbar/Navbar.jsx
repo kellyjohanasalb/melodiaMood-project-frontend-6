@@ -6,16 +6,16 @@ import './styles.scss'
 
 function Navbar() {
     return (
-      <div className="navbar-container-Principal">
-        <Link  to="/home"   className="navabr-container-principal-1 ">
+      <div className="footer-container-Principal">
+        <Link  to="/home"   className="footer-container-principal-1 ">
          <IoMdHome className="home"/>
          <span className="ho">Home</span>
         </Link>
-        <Link to="/search"  className="navabr-container-principal-2 ">
+        <Link to="/search"  className="footer-container-principal-2 ">
          <IoSearchOutline className="search"/>
          <span className="search-1">Search</span>
         </Link>
-        <Link to="/library"  className="navabr-container-principal-3 ">
+        <Link to="/library"  className="footer-container-principal-3 ">
          <VscLibrary className="library"/>
          <span className="your"> your library</span>
         </Link>
