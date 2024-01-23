@@ -2,6 +2,7 @@ import { firestore } from '../../firebase/firebaseConfig'
 import { collection, getDocs, where, query } from "firebase/firestore";
 import {  setSongs,  setSearch, setLoading, setError } from './songsSlice';
 
+
 const songsCollection = collection(firestore, 'songs')
 
 export const getSongs = () => {

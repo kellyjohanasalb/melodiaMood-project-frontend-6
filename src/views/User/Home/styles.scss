@@ -51,7 +51,8 @@
 .imgen-profile-icon {
   width: 40px;
   height: 40px;
-  margin-top: 10px;
+  margin-top: 5px;
+  color: $color-7;
   @media screen and (min-width: $desktop-width) {
     width: 50px;
     height: 50px;
@@ -60,7 +61,7 @@
   .imgen-profile{
     width: 40px;
     height: 40px;
-    margin-top: 10px;
+    margin-top: 5px;
     @media screen and (min-width: $desktop-width) {
       width: 50px;
       height: 50px;
