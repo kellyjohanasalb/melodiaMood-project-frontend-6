@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import {  useNavigate } from "react-router-dom";
 // import { setSongs, setSearch } from "../../../store/songs/songsSlice";
 import {
   searchSongsAction,
@@ -9,8 +10,10 @@ import { CiSearch } from "react-icons/ci";
 import "./styles.scss";
 import Navbar from "../../../components/User/Navbar/Navbar";
 
+
 function Search() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [searchTerm, setSerchTerm] = useState("");
   const [showResponseSearch, setShowResponseSearch] = useState(false);
   /*  const searchSongs = useSelector((state) => state.search.searchsongs); */
@@ -23,6 +26,7 @@ function Search() {
       setShowResponseSearch(false);
     } else {
       setShowResponseSearch(true);
+     
     }
   };
 
@@ -36,15 +40,18 @@ function Search() {
     }
   };
 
-  const handleMoodSearch = (e, searchValue) => {
-    setSerchTerm(e.target.value);
-    if (e.target.value.length > 6) {
-      dispatch(filteredSongsActions("mood", searchValue));
+  const handleMoodSearch = (searchParam, searchValue) => {
+    if (searchValue) {
+      dispatch(filteredSongsActions(searchParam, searchValue));
       setShowResponseSearch(false);
     } else {
       setShowResponseSearch(true);
     }
   };
+
+  const handlePlaySong = (idSong) =>{
+    navigate(`/now-playing/${idSong}`);
+  }
 
   return (
     <main className="container-search-major">
@@ -62,49 +69,47 @@ function Search() {
           {showResponseSearch && <h3>No se encontraron resultados</h3>}
         </div>
       </header>
+        {search.length > 0 && !showResponseSearch ?(
       <section className="Section-songs">
-        {search.length > 0 ? (
-          search.map((item) => <article key={item.id}>{item.songName}</article>)
-        ) : (
-          <>
-            <ul className="ul">
-              {search.map((item) => (
-                <li key={item.id}>{item.songName}</li>
-              ))}
-            </ul>
-          </>
-        )}
+          <ul className="ul">
+            {search.map((item) => (
+              <li key={item.id} onClick={()=>handlePlaySong(item.id)}>{item.songName} </li>
+            ))}
+          </ul>
       </section>
+        ) : (
+          <div></div>
+        )}
       <section className="container-search-moods">
         <h3>Your main moods</h3>
         <div className="emotions">
           <button
             className="emotions-happy"
-            onClick={() => handleMoodSearch("e", "alegria")}
+            onClick={() => handleMoodSearch("songEmotion", "alegria")}
           >
             ALEGRIA
           </button>
           <button
             className="emotions-anxiety"
-            onClick={() => handleMoodSearch("e", "ansiedad")}
+            onClick={() => handleMoodSearch("songEmotion", "ansiedad")}
           >
             ANSIEDAD
           </button>
           <button
             className="emotions-sadness"
-            onClick={() => handleMoodSearch("e", "tristeza")}
+            onClick={() => handleMoodSearch("songEmotion", "tristeza")}
           >
             TRISTEZA
           </button>
           <button
             className="emotions-fear"
-            onClick={() => handleMoodSearch("mood", "miedo")}
+            onClick={() => handleMoodSearch("songEmotion", "miedo")}
           >
             MIEDO
           </button>
           <button
             className="emotions-anger"
-            onClick={() => handleMoodSearch("e", "enojo")}
+            onClick={() => handleMoodSearch("songEmotion", "enojo")}
           >
             ENOJO
           </button>
