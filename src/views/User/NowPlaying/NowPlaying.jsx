@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { AiFillPauseCircle } from "react-icons/ai"; // icons for play and pause
+import { useState, useEffect, useRef } from "react";
+import { AiFillPauseCircle, AiFillPlayCircle } from "react-icons/ai"; // icons for play and pause
 import { BiSkipNext, BiSkipPrevious } from "react-icons/bi";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
@@ -12,10 +12,11 @@ import "./NowPlaying.scss";
 
 function NowPlaying() {
   const { idSong } = useParams();
-  console.log(idSong);
+ /*  console.log(idSong); */
   const dispatch = useDispatch();
   const songs = useSelector((store) => store.songs.songs);
-  const [audio, setAudio] = useState(null);
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false); 
   const [currentSong, setCurrentSong] = useState(null);
 
   useEffect(() => {
@@ -27,78 +28,114 @@ function NowPlaying() {
     const foundSong = songs.find((song) => song.id === idSong);
     setCurrentSong(foundSong);
 
-    // Configuración del reproductor de música
-    const audioElement = document.querySelector("audio");
-    setAudio(audioElement);
+      const tagComponent = document.getElementById("component")
+      switch (currentSong?.songEmotion) {
+        case "tristeza":
+          tagComponent.style.background = "#2E6AF3"; // Puedes cambiar el color según tus preferencias
+          break;
+        case "alegria":
+          tagComponent.style.background = "#F4F955";
+          break;
+        case "miedo":
+          tagComponent.style.background = "#8F3B96";
+          break;
+        case "enojo":
+          tagComponent.style.background = "#D71C09";
+          break;
+        case "ansiedad":
+          tagComponent.style.background = "#62BC87";
+          break;
+        default:
+          // En caso de que la emoción no sea ninguna de las anteriores, puedes establecer un color predeterminado.
+          tagComponent.style.background = "#FFFFFF";
+      }
+      
+   
   }, [idSong, songs]);
 
-  useEffect(() => {
-    const setProgress = () => {
-      if (audio) {
-        const percentage = (audio.currentTime / audio.duration) * 100;
-        const progressBar = document.querySelector(".progress");
-        progressBar.style.width = percentage + "%";
-      }
-    };
-    const displayDuration = () => {
-      if (audio && audio.readyState > 0) {
-        const songLength = document.getElementById("SongLenght");
-        songLength.innerHTML = calculateTime(audio.duration);
-      }
-    };
-
-    const updateCurrentTime = () => {
-      if (audio) {
-        const currentTime = document.getElementById("CurrentSongTime");
-        currentTime.innerHTML = calculateTime(audio.currentTime);
-        setProgress();
-      }
-    };
-    if (audio) {
-      // Configuración de eventos y funciones del reproductor de música
-      audio.addEventListener("loadedmetadata", displayDuration);
-      audio.ontimeupdate = updateCurrentTime;
-    }
-  }, [audio]);
-
-  
-
+  console.log(currentSong);
   const calculateTime = (secs) => {
     const minutes = Math.floor(secs / 60),
-      seconds = Math.floor(secs % 60),
-      returnSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+          seconds = Math.floor(secs % 60),
+          returnSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
     return `${minutes}:${returnSeconds}`;
   };
 
-  
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const displayDuration = () => {
+    const songLength = document.getElementById('SongLenght');
+    songLength.innerHTML = calculateTime(audioRef.current.duration);
+  };
+
+  useEffect(() => {
+    if (audioRef.current && audioRef.current.readyState > 0) {
+      displayDuration();
+      const currentTime = document.getElementById('CurrentSongTime');
+      currentTime.innerHTML = calculateTime(audioRef.current.currentTime);
+    } else if (audioRef.current) {
+      audioRef.current.addEventListener('loadedmetadata', () => {
+        displayDuration();
+      });
+    }
+  }, [audioRef, displayDuration]);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.ontimeupdate = function () {
+        const currentTime = document.getElementById('CurrentSongTime');
+        currentTime.innerHTML = calculateTime(audioRef.current.currentTime);
+        setProgress();
+      };
+    }
+  }, [audioRef]);
+
+  const setProgress = () => {
+    const percentage = (audioRef.current.currentTime / audioRef.current.duration) * 100;
+    const progressBar = document.querySelector('.progress');
+    progressBar.style.width = percentage + '%';
+  };
+
+ /*  const playPause = () => {
+    const playPauseButton = document.getElementById('playPause');
+    if (audioRef.current.paused) {
+      playPauseButton.className = <AiFillPauseCircle />;
+      audioRef.current.play();
+      setIsPlaying(true);
+    } else {
+      playPauseButton.className = <AiFillPlayCircle />;
+      audioRef.current.pause();
+      setIsPlaying(false);
+    }
+  }; */
 
   const playPause = () => {
-    if (audio) {
-      const playPauseButton = document.getElementById("playPause");
-      if (audio.paused) {
-        playPauseButton.className = "CiPause1";
-        audio.play();
+    if (audioRef.current) {
+      if (audioRef.current.paused) {
+        audioRef.current.play(songs);
+        setIsPlaying(true);
       } else {
-        playPauseButton.className = "CiPlay1";
-        audio.pause();
+        audioRef.current.pause(songs);
+        setIsPlaying(false);
       }
     }
   };
 
-  const plus10 = () => {
-    if (audio) {
-      audio.currentTime += 10;
+  const skipForward = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime += 20; // Adelanta 10 segundos
+    }
+  };
+  
+  const skipBackward = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime -= 20; // Retrocede 10 segundos
     }
   };
 
-  const back10 = () => {
-    if (audio) {
-      audio.currentTime -= 10;
-    }
-  };
+
 
   return (
-    <div className="component">
+    <div className="component" id="component">
       <div className="song-description">
         <IconContext.Provider value={{ size: "3em", color: "#FFF" }}>
           <IoIosArrowDown />
@@ -108,38 +145,47 @@ function NowPlaying() {
           <BsThreeDotsVertical />
         </IconContext.Provider>
       </div>
-      <img className="musicCover" src="https://picsum.photos/200/200" />
+      {currentSong?<img className="musicCover" src={currentSong["post-album"]} />:null}
+     {/*  <img className="musicCover" src={currentSong["post-album"]} /> */}
 
       <div className="song-info">
         <div className="song-info-title">
           <h3 className="title">{currentSong?.songName}</h3>
-          <p className="artist">{currentSong?.artist}</p>
-          <p className="postAlbum">{currentSong?.postAlbum}</p>
-          <p className="songColor">{currentSong?.songColor}</p>
+  
           <IconContext.Provider value={{ size: "4em", color: "#FFF" }}>
             <FaRegHeart />
           </IconContext.Provider>
         </div>
-        <p className="subTitle"></p>
+        <p className="artist">{currentSong?.artist}</p>
       </div>
 
       <div>
-        <button className="playButton" onClick={plus10}>
+        <button className="playButton" onClick={skipBackward} >
           <IconContext.Provider value={{ size: "4em", color: "#FFF" }}>
             <BiSkipPrevious />
           </IconContext.Provider>
         </button>
-        <button className="playButton" onClick={playPause}>
+         <button className="playButton" onClick={playPause}>
           <IconContext.Provider value={{ size: "4em", color: "#FFF" }}>
-            <AiFillPauseCircle id="playPause" />
+            {isPlaying ? (
+              <AiFillPauseCircle id="playPause" />
+            ) : (
+              <AiFillPlayCircle id="playPause" />
+            )}
           </IconContext.Provider>
-        </button>
-        <button className="playButton" onClick={back10}>
+        </button> 
+        <button className="playButton"  onClick={skipForward} >
           <IconContext.Provider value={{ size: "4em", color: "#FFF" }}>
             <BiSkipNext />
           </IconContext.Provider>
         </button>
       </div>
+      <div className="song-time">
+        <span id="CurrentSongTime">0:00</span>
+        <div className="progress"></div>
+        <span id="SongLenght">0:00</span>
+      </div>
+      <audio ref={audioRef} src={currentSong?.song} />
     </div>
   );
 }
