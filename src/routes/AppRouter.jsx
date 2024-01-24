@@ -33,7 +33,7 @@ function AppRouter() {
             <Route path="/" element={<Welcome />} />
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/now-playing" element={<NowPlaying />} />
+            <Route path="/now-playing/:idSong" element={<NowPlaying />} />
             <Route path="/library" element={<Library />} />
             <Route path="/search" element={<Search />} />
             <Route path="/sign-up" element={<SignUp />} />
