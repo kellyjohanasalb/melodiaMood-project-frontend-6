@@ -31,7 +31,7 @@ function NowPlaying() {
       const tagComponent = document.getElementById("component")
       switch (currentSong?.songEmotion) {
         case "tristeza":
-          tagComponent.style.background = "#2E6AF3"; // Puedes cambiar el color según tus preferencias
+          tagComponent.style.background = "#2E6AF3"; 
           break;
         case "alegria":
           tagComponent.style.background = "#F4F955";
@@ -51,7 +51,7 @@ function NowPlaying() {
       }
       
    
-  }, [idSong, songs]);
+  }, [currentSong?.songEmotion, idSong, songs]);
 
   console.log(currentSong);
   const calculateTime = (secs) => {

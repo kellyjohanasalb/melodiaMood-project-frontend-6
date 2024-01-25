@@ -1,7 +1,7 @@
 @use '../../../styles/variables' as *;
 @use '../../../styles/mixins' as *;
 
-.login-form {
+.login-container {
     width: $mobile-width;
     height: $mobile-height;
     display: flex;
@@ -10,7 +10,6 @@
     justify-content: center;
     height: 100vh;
     background: $color-11;
-    border: 2px solid ;
     border-radius: 20px;
     }
 
@@ -18,9 +17,12 @@
     width: 200px; 
     height: auto;
     margin-bottom: 20px; 
+/*   display: flex;
+  margin-left: 131px; */
     }
 
     .login-button {
+      width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,6 +33,7 @@
     cursor: pointer;
     background-color: $color-9; 
     color: $color-7; 
+   /*  margin-left: 75px; */
 
     svg {
         margin-right: 8px; 
@@ -42,7 +45,7 @@
     text-decoration: none;
     color: $color-4; 
     font-weight: bold;
-
+   /*  margin-left: 211px; */
     &:hover {
         color: $color-3;
     }

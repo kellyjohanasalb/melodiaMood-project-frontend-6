@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logoutAsync } from "../../../store/users/userThunks";
 import { FaArrowLeft, FaSignOutAlt } from "react-icons/fa";
 import "./styles.scss";
 
 const Settings = () => {
+  const dispatch = useDispatch();
   return (
     <div className="settings-container">
       <div className="settings-header">
@@ -38,7 +41,7 @@ const Settings = () => {
         {/* Agrega otras secciones y configuraciones según sea necesario */}
       </div>
 
-      <button className="logout-button">
+      <button className="logout-button" onClick={() => dispatch(logoutAsync())}>
         <FaSignOutAlt /> Cerrar Sesión
       </button>
     </div>
