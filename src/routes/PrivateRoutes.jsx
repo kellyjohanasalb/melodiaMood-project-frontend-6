@@ -1,12 +1,11 @@
+
 import { Navigate, Outlet } from "react-router-dom";
 
 
-function PrivatedRoutes({
-    // eslint-disable-next-line react/prop-types
-    isAuthenticated, redirectPath = "/sign-Up", children,
-}) {
-    if (!isAuthenticated) return <Navigate to={redirectPath} />;
-    return <div>{children ? children : <Outlet />}</div>;
+function PrivatedRoutes( isAuthenticate) {
+
+        return !isAuthenticate ? <Navigate to={'/login'} /> : <Outlet />
+    
 }
 
 export default PrivatedRoutes;

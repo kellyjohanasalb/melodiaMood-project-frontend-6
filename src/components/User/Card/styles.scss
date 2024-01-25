@@ -2,35 +2,44 @@
 @use '../../../styles/mixins' as *;
  
 .Card-container {
-  width: 383px;
-  height: 197px; 
+  width: 383px; 
   display: flex; 
-  overflow-x: hidden; 
-  @include removeScrollBar;
-  padding-bottom: 20px; 
-  margin-left: 10px;
-  margin-top: 9px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+    height: 596px;
+    justify-content: space-between; 
+    margin-left: 33px;
+    margin-top: 45px;
+    overflow-y: hidden;
+    object-fit: cover; 
   @media screen and (min-width: $desktop-width) {
-    width: $desktop-width;
+    width: 1000px;
     height: $desktop-height; 
-    display: flex; 
-    overflow-x: hidden; 
-    @include removeScrollBar;
-    padding-bottom: 20px; 
     margin-left: 74px;
-    margin-top: 20px;
+    margin-top: -188px;
   }
 }
 
 .gallery-container-1 {
-  display: flex; 
+  display: flex;
   gap: 20px;
-  flex-wrap: nowrap;
-  overflow-x: hidden; 
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;// Utiliza overflow-x: auto para permitir el desplazamiento horizontal si es necesario
   @include removeScrollBar;
+
   @media screen and (min-width: $desktop-width) {
-    width: $desktop-width;
-    height: $desktop-height;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;// Utiliza overflow-x: auto para permitir el desplazamiento horizontal si es necesario
+    @include removeScrollBar;
   }
 }
 
@@ -38,24 +47,11 @@
   width: 150px; 
   height: 175px; 
   border-radius: 10px; 
-
+ 
   @media screen and (min-width: $desktop-width) {
-    width: $desktop-width;
-    height: $desktop-height;
-}
-}
-
-.gallery-container-1 {
-  display: flex; 
-  gap: 20px;
-  flex-wrap: nowrap;
-  overflow-x: hidden;  
-  @include removeScrollBar;
-}
-
-.gallery-container-1 img {
-  width: 150px; 
+    width: 200px; 
   height: 175px; 
   border-radius: 10px; 
+  }
 }
 

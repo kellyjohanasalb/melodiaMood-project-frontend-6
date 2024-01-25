@@ -6,6 +6,7 @@ import "./styles.scss";
 
 const Settings = () => {
   const dispatch = useDispatch();
+  
   return (
     <div className="settings-container">
       <div className="settings-header">

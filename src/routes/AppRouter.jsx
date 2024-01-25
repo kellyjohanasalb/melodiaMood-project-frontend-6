@@ -47,9 +47,9 @@ function AppRouter() {
           </Route>
        {/*  </PublicRoutes> */}
         {/* <PrivatedRoutes isAuthenticated={isAuthenticated} redirectPath="/login"> */}
-          <Route element={<PrivatedRoutes isAuthenticated={isAuthenticate} redirectPath="/login"/>} >
-            <Route path="/home" element={<Home />} />
+          <Route element={<PrivatedRoutes isAuthenticate />}>
             <Route path="/now-playing/:idSong" element={<NowPlaying />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/library" element={<Library />} />
             <Route path="/search" element={<Search />} />
             <Route path="/profile" element={<Profile />} />

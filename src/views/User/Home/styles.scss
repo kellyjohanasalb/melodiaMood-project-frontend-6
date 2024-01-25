@@ -175,7 +175,7 @@
   }
 }
 
-.container-home-body {
+container-home-body {
   width: 414px;
   height: 718px;
   display: grid;
@@ -184,26 +184,24 @@
     width: 414px;
     height: 718px;
     display: grid;
-
   }
 }
 
-.container-home-body>div {
+
+.container-home-body > div {
   width: 414px;
   height: 227px;
   margin-bottom: -27px;
+
   @media screen and (min-width: $desktop-width) {
     width: 475px;
     height: 245px;
     margin-bottom: -27px;
-
   }
 }
 
 .container-home-body,
 .container-home-body-1,
-.container-home-body-2,
-.container-home-body-3,
 span {
   font-weight: bold;
   margin-left: 5px;
@@ -211,16 +209,14 @@ span {
   color: $color-7;
   font-family: $font-source;
   font-size: 15px;
+
   @media screen and (min-width: $desktop-width) {
-   
-    font-size: 18px;
-    font-size: 1.3em;
+  
     font-weight: bold;
     margin-left: 10px;
     margin-top: 28px;
-    color: $color-7;
-    font-family: $font-source;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 700;
   }
 }
 
