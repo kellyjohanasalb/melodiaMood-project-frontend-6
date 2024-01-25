@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   FaHeart,
   FaPlay,
@@ -11,11 +11,13 @@ import {
 import "./styles.scss";
 
 const Library = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="library-container">
-      <Link to="/home" className="library-header">
+      <div className="library-header" onClick={() => navigate('/home')}>
         <FaArrowLeft className="back-icon" />
-      </Link>
+      </div>
       <div className="library-header-mylibrary">
         <h1>Mi Biblioteca</h1>
       </div>
