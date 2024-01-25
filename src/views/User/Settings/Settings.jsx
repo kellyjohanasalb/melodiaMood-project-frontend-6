@@ -3,9 +3,16 @@ import { useDispatch } from "react-redux";
 import { logoutAsync } from "../../../store/users/userThunks";
 import { FaArrowLeft, FaSignOutAlt } from "react-icons/fa";
 import "./styles.scss";
+import { useNavigate } from "react-router-dom";
 
 const Settings = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
+
+  const logout = () => {
+    dispatch(logoutAsync())
+    navigate('/login')
+  }
   
   return (
     <div className="settings-container">
@@ -42,7 +49,7 @@ const Settings = () => {
         {/* Agrega otras secciones y configuraciones según sea necesario */}
       </div>
 
-      <button className="logout-button" onClick={() => dispatch(logoutAsync())}>
+      <button className="logout-button" onClick={() => logout()}>
         <FaSignOutAlt /> Cerrar Sesión
       </button>
     </div>

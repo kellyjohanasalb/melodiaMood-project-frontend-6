@@ -82,12 +82,12 @@ import {
     }
   }
   
-  export const logoutAsync = () => async ( dispatch ) => {
+  export const logoutAsync = () =>  async ( dispatch ) => {
     try {
-      await signOut(auth)
       dispatch(setIsAuthenticate(false))
       dispatch(setUser(null))
-      dispatch(setError(null))
+      dispatch(setError(null))      
+      await signOut(auth)
     } catch (error) {
       dispatch(
         setError({ error: true, code: error.code, message: error.message })

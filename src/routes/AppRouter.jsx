@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PublicRoutes from "./PublicRoutes.jsx";
 import PrivatedRoutes from "./PrivateRoutes.jsx";
 import Home from "../views/User/Home/Home.jsx";
 import NowPlaying from "../views/User/NowPlaying/NowPlaying.jsx";
@@ -28,26 +27,28 @@ function AppRouter() {
 
   useEffect(()=>{
     onAuthStateChanged(auth, (userLogged) => {
-      if (userLogged?.uid && !user) {
+      console.log("userLogged", userLogged)
+      console.log("user store", user)
+      if (userLogged) {
         dispatch(setIsAuthenticate(true));
         dispatch(setUser({ email: userLogged.email, id: userLogged.uid, name: userLogged.name, photoURL: userLogged.photoURL, accessToken: userLogged.accessToken }))
       }
     });
-  },[dispatch, user])
+  },[])
 
  return (
   <BrowserRouter>
     <Routes>
       <Route path="/">
       {/*   <PublicRoutes isAuthenticated={isAuthenticated} redirectPath="/home"> */}
-          <Route element={<PublicRoutes isAuthenticated={isAuthenticate}  redirectPath="/home"/> }>
-            <Route path="/" element={<Welcome />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/sign-up" element={<SignUp />} />
-          </Route>
+          
+        <Route path="/" element={<Welcome />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/sign-up" element={<SignUp />} />
+         
        {/*  </PublicRoutes> */}
         {/* <PrivatedRoutes isAuthenticated={isAuthenticated} redirectPath="/login"> */}
-          <Route element={<PrivatedRoutes isAuthenticate />}>
+          <Route element={<PrivatedRoutes isAuthenticate={isAuthenticate} />}>
             <Route path="/now-playing/:idSong" element={<NowPlaying />} />
             <Route path="/home" element={<Home />} />
             <Route path="/library" element={<Library />} />

@@ -13,7 +13,6 @@ const LoginPage = () => {
       const provider = new GoogleAuthProvider();
       await signInWithPopup(auth, provider);
       console.log('Inicio de sesión con Google exitoso');
-
       navigate('/home');
     } catch (error) {
       console.error('Error al iniciar sesión con Google', error.message);
